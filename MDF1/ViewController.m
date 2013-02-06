@@ -26,4 +26,10 @@
     // Dispose of any resources that can be recreated.
 }
 
+//This creates the rows for the ViewController table view.
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return 0;
+}
+
 @end

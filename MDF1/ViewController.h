@@ -9,5 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface ViewController : UIViewController
+{
+    IBOutlet UITableView *baseballPlayers; //outlet for the table view
+}
 
 @end
