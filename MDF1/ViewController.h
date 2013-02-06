@@ -11,6 +11,8 @@
 @interface ViewController : UIViewController
 {
     IBOutlet UITableView *baseballPlayers; //outlet for the table view
+    
+    NSArray *listOfPlayers; //this is the array of player names for the list
 }
 
 @end

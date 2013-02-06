@@ -16,6 +16,28 @@
 
 - (void)viewDidLoad
 {
+    listOfPlayers = [[NSArray alloc] initWithObjects:
+                     @"Evan Longoria",
+                     @"David Price",
+                     @"Sam Fuld",
+                     @"Desmond Jennings",
+                     @"Brandon Guyer",
+                     @"Matt Joyce",
+                     @"Ben Zobrist",
+                     @"Sean Rodriguez",
+                     @"Yunel Escobar",
+                     @"Kelly Johnson",
+                     @"James Loney",
+                     @"Ryan Roberts",
+                     @"Robinson Chirinos",
+                     @"Chris Gimenez",
+                     @"Chris Archer",
+                     @"Alex Cobb",
+                     @"Jeremy Hellickson",
+                     @"Matt Moore",
+                     @"Fernando Rodney",
+                     @"Kyle Farnsworth",
+                     nil];
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
 }
@@ -29,7 +51,7 @@
 //This creates the rows for the ViewController table view.
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 1;
+    return [listOfPlayers count];
 }
 
 //This feeds the data for the table view
@@ -43,7 +65,8 @@
         thisCell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
     }
     
-    thisCell.textLabel.text = @"hello";
+    thisCell.textLabel.text = [listOfPlayers objectAtIndex:indexPath.row];
+    
     return thisCell;
 } 
 
