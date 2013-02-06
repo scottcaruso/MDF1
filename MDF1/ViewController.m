@@ -29,7 +29,22 @@
 //This creates the rows for the ViewController table view.
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 0;
+    return 1;
 }
+
+//This feeds the data for the table view
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    NSString *cellIdentifier = @"Cell";
+    
+    UITableViewCell *thisCell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+    if (thisCell == nil)
+    {
+        thisCell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
+    }
+    
+    thisCell.textLabel.text = @"hello";
+    return thisCell;
+} 
 
 @end
