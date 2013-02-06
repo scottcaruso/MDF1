@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "customPlayerCell.h"
 
 @interface ViewController ()
 
@@ -57,15 +58,24 @@
 //This feeds the data for the table view
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSString *cellIdentifier = @"Cell";
+    static NSString *cellIdentifier = @"Cell";
     
-    UITableViewCell *thisCell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+    customPlayerCell *thisCell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
     if (thisCell == nil)
     {
-        thisCell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
+        //thisCell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
+        NSArray* views = [[NSBundle mainBundle] loadNibNamed:@"customPlayerView" owner:nil options:nil];
+        
+        for (UIView *view in views)
+        {
+            if([view isKindOfClass:[customPlayerCell class]])
+            {
+                thisCell = (customPlayerCell*)view;
+            }
+        }
     }
     
-    thisCell.textLabel.text = [listOfPlayers objectAtIndex:indexPath.row];
+    //thisCell.textLabel.text = [listOfPlayers objectAtIndex:indexPath.row];
     
     return thisCell;
 } 

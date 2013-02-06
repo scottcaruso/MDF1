@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		302B125C16C220E200F7F81C /* customPlayerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 302B125B16C220E200F7F81C /* customPlayerView.xib */; };
+		302B125F16C2218300F7F81C /* customPlayerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 302B125E16C2218300F7F81C /* customPlayerCell.m */; };
 		305BE2B716C1F33F00E88E36 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 305BE2B616C1F33F00E88E36 /* UIKit.framework */; };
 		305BE2B916C1F33F00E88E36 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 305BE2B816C1F33F00E88E36 /* Foundation.framework */; };
 		305BE2BB16C1F33F00E88E36 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 305BE2BA16C1F33F00E88E36 /* CoreGraphics.framework */; };
@@ -36,6 +38,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		302B125B16C220E200F7F81C /* customPlayerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = customPlayerView.xib; sourceTree = "<group>"; };
+		302B125D16C2218300F7F81C /* customPlayerCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = customPlayerCell.h; sourceTree = "<group>"; };
+		302B125E16C2218300F7F81C /* customPlayerCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = customPlayerCell.m; sourceTree = "<group>"; };
 		305BE2B216C1F33F00E88E36 /* MDF1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MDF1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		305BE2B616C1F33F00E88E36 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		305BE2B816C1F33F00E88E36 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -122,7 +127,10 @@
 				305BE2CE16C1F33F00E88E36 /* ViewController.h */,
 				305BE2CF16C1F33F00E88E36 /* ViewController.m */,
 				305BE2D116C1F33F00E88E36 /* ViewController.xib */,
+				302B125B16C220E200F7F81C /* customPlayerView.xib */,
 				305BE2BD16C1F33F00E88E36 /* Supporting Files */,
+				302B125D16C2218300F7F81C /* customPlayerCell.h */,
+				302B125E16C2218300F7F81C /* customPlayerCell.m */,
 			);
 			path = MDF1;
 			sourceTree = "<group>";
@@ -236,6 +244,7 @@
 				305BE2CB16C1F33F00E88E36 /* Default@2x.png in Resources */,
 				305BE2CD16C1F33F00E88E36 /* Default-568h@2x.png in Resources */,
 				305BE2D316C1F33F00E88E36 /* ViewController.xib in Resources */,
+				302B125C16C220E200F7F81C /* customPlayerView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -273,6 +282,7 @@
 				305BE2C316C1F33F00E88E36 /* main.m in Sources */,
 				305BE2C716C1F33F00E88E36 /* AppDelegate.m in Sources */,
 				305BE2D016C1F33F00E88E36 /* ViewController.m in Sources */,
+				302B125F16C2218300F7F81C /* customPlayerCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -449,6 +459,7 @@
 				305BE2ED16C1F34000E88E36 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		305BE2EE16C1F34000E88E36 /* Build configuration list for PBXNativeTarget "MDF1Tests" */ = {
 			isa = XCConfigurationList;
@@ -457,6 +468,7 @@
 				305BE2F016C1F34000E88E36 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
