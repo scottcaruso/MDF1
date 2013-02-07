@@ -78,6 +78,24 @@
     //thisCell.textLabel.text = [listOfPlayers objectAtIndex:indexPath.row];
     
     return thisCell;
-} 
+}
+
+//The function to pull up the remove buttons
+-(UITableViewCellEditingStyle)tableView:(UITableView *)tableVieweditingStyleForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return UITableViewCellEditingStyleDelete;
+}
+
+//Bring up the remove buttons in the list
+-(IBAction)onEditClick:(id)sender
+{
+    [baseballPlayers setEditing:TRUE];
+}
+
+//Handle selection of a row in the tableView
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    NSLog(@"Row selected = %d",indexPath.row);
+}
 
 @end

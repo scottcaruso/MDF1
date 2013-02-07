@@ -10,7 +10,8 @@
 
 @interface customPlayerCell : UITableViewCell
 {
-
+    IBOutlet UILabel *playerName;
+    IBOutlet UILabel *playerPosition;
 }
 
 @end
