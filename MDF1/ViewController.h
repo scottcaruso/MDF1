@@ -12,7 +12,11 @@
 {
     IBOutlet UITableView *baseballPlayers; //outlet for the table view
     IBOutlet UIButton *editButton;
-    NSArray *listOfPlayers; //this is the array of player names for the list
+    NSMutableArray *listOfPlayers; //this is the array of player names for the list
+    NSMutableArray *listOfPositions; //the positions that go with the players
+    
+    UILabel *playerPosition;
+    UILabel *playerName;
 }
 
 -(IBAction)onEditClick:(id)sender;

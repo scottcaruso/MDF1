@@ -9,6 +9,8 @@
 #import "customPlayerCell.h"
 
 @implementation customPlayerCell
+@synthesize playerName;
+@synthesize playerPosition;
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {

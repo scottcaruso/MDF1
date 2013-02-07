@@ -17,7 +17,7 @@
 
 - (void)viewDidLoad
 {
-    listOfPlayers = [[NSArray alloc] initWithObjects:
+    listOfPlayers = [[NSMutableArray alloc] initWithObjects:
                      @"Evan Longoria",
                      @"David Price",
                      @"Sam Fuld",
@@ -39,8 +39,30 @@
                      @"Fernando Rodney",
                      @"Kyle Farnsworth",
                      nil];
+    listOfPositions = [[NSMutableArray alloc] initWithObjects:
+                     @"Third Baseman",
+                     @"Pitcher",
+                     @"Outfielder",
+                     @"Outfielder",
+                     @"Outfielder",
+                     @"Outfielder",
+                     @"Utility Player",
+                     @"Second Base",
+                     @"Shortstop",
+                     @"Second Base",
+                     @"First Base",
+                     @"Third Base",
+                     @"Catcher",
+                     @"Catcher",
+                     @"Pitcher",
+                     @"Pitcher",
+                     @"Pitcher",
+                     @"Pitcher",
+                     @"Pitcher",
+                     @"Pitcher",
+                     nil];
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+	//Do any additional setup after loading the view, typically from a nib.
 }
 
 - (void)didReceiveMemoryWarning
@@ -63,7 +85,6 @@
     customPlayerCell *thisCell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
     if (thisCell == nil)
     {
-        //thisCell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
         NSArray* views = [[NSBundle mainBundle] loadNibNamed:@"customPlayerView" owner:nil options:nil];
         
         for (UIView *view in views)
@@ -71,25 +92,26 @@
             if([view isKindOfClass:[customPlayerCell class]])
             {
                 thisCell = (customPlayerCell*)view;
+                thisCell.playerName.text = [listOfPlayers objectAtIndex:indexPath.row];
+                thisCell.playerPosition.text = [listOfPositions objectAtIndex:indexPath.row];
+    
             }
         }
     }
-    
-    //thisCell.textLabel.text = [listOfPlayers objectAtIndex:indexPath.row];
-    
+
     return thisCell;
 }
 
-//The function to pull up the remove buttons
--(UITableViewCellEditingStyle)tableView:(UITableView *)tableVieweditingStyleForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    return UITableViewCellEditingStyleDelete;
-}
-
-//Bring up the remove buttons in the list
+//Bring up the remove buttons in the list when the Edit button is clicked
 -(IBAction)onEditClick:(id)sender
 {
     [baseballPlayers setEditing:TRUE];
+}
+
+//The function to set the editing style to delete mode when editing is set to true.
+-(UITableViewCellEditingStyle)tableView:(UITableView *)tableVieweditingStyleForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return UITableViewCellEditingStyleDelete;
 }
 
 //Handle selection of a row in the tableView
@@ -97,5 +119,17 @@
 {
     NSLog(@"Row selected = %d",indexPath.row);
 }
+
+//Delete an item when the button is pressed
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (editingStyle == UITableViewCellEditingStyleDelete)
+    {
+        [listOfPlayers removeObjectAtIndex:indexPath.row];
+        [listOfPositions removeObjectAtIndex:indexPath.row];
+        [baseballPlayers deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:(true)];
+    }
+}
+
 
 @end
