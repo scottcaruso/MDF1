@@ -11,14 +11,11 @@
 @interface ViewController : UIViewController <UITableViewDelegate>
 {
     IBOutlet UITableView *baseballPlayers; //outlet for the table view
-    IBOutlet UIButton *editButton;
+    IBOutlet UIButton *editButton; //outlet for the Edit Button in the main view
     NSMutableArray *listOfPlayers; //this is the array of player names for the list
     NSMutableArray *listOfPositions; //the positions that go with the players
-    
-    UILabel *playerPosition;
-    UILabel *playerName;
 }
 
--(IBAction)onEditClick:(id)sender;
+-(IBAction)onEditClick:(id)sender; //performs action when Edit Button is clicked.
 
 @end
