@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "30B28BBA16C8A76B00490A9A"
-               BuildableName = "MDF1.app"
-               BlueprintName = "MDF1"
-               ReferencedContainer = "container:MDF1.xcodeproj">
+               BlueprintIdentifier = "30B28C0016C8B24500490A9A"
+               BuildableName = "MDF1_week2.app"
+               BlueprintName = "MDF1_week2"
+               ReferencedContainer = "container:MDF1_week2.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -32,10 +32,10 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "30B28BBA16C8A76B00490A9A"
-            BuildableName = "MDF1.app"
-            BlueprintName = "MDF1"
-            ReferencedContainer = "container:MDF1.xcodeproj">
+            BlueprintIdentifier = "30B28C0016C8B24500490A9A"
+            BuildableName = "MDF1_week2.app"
+            BlueprintName = "MDF1_week2"
+            ReferencedContainer = "container:MDF1_week2.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -51,10 +51,10 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "30B28BBA16C8A76B00490A9A"
-            BuildableName = "MDF1.app"
-            BlueprintName = "MDF1"
-            ReferencedContainer = "container:MDF1.xcodeproj">
+            BlueprintIdentifier = "30B28C0016C8B24500490A9A"
+            BuildableName = "MDF1_week2.app"
+            BlueprintName = "MDF1_week2"
+            ReferencedContainer = "container:MDF1_week2.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -69,10 +69,10 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "30B28BBA16C8A76B00490A9A"
-            BuildableName = "MDF1.app"
-            BlueprintName = "MDF1"
-            ReferencedContainer = "container:MDF1.xcodeproj">
+            BlueprintIdentifier = "30B28C0016C8B24500490A9A"
+            BuildableName = "MDF1_week2.app"
+            BlueprintName = "MDF1_week2"
+            ReferencedContainer = "container:MDF1_week2.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

@@ -1,6 +1,6 @@
 //
 //  AppDelegate.m
-//  MDF1
+//  MDF1_week2
 //
 //  Created by Scott Caruso on 2/10/13.
 //  Copyright (c) 2013 Scott Caruso. All rights reserved.

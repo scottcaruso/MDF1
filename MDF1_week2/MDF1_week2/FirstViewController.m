@@ -1,18 +1,18 @@
 //
-//  SecondViewController.m
-//  MDF1
+//  FirstViewController.m
+//  MDF1_week2
 //
 //  Created by Scott Caruso on 2/10/13.
 //  Copyright (c) 2013 Scott Caruso. All rights reserved.
 //
 
-#import "SecondViewController.h"
+#import "FirstViewController.h"
 
-@interface SecondViewController ()
+@interface FirstViewController ()
 
 @end
 
-@implementation SecondViewController
+@implementation FirstViewController
 
 - (void)viewDidLoad
 {
