@@ -20,10 +20,12 @@
 		30B28C2216C8B24500490A9A /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30B28C2116C8B24500490A9A /* FirstViewController.m */; };
 		30B28C2416C8B24500490A9A /* first.png in Resources */ = {isa = PBXBuildFile; fileRef = 30B28C2316C8B24500490A9A /* first.png */; };
 		30B28C2616C8B24500490A9A /* first@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 30B28C2516C8B24500490A9A /* first@2x.png */; };
-		30B28C2916C8B24500490A9A /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30B28C2816C8B24500490A9A /* SecondViewController.m */; };
 		30B28C2B16C8B24500490A9A /* second.png in Resources */ = {isa = PBXBuildFile; fileRef = 30B28C2A16C8B24500490A9A /* second.png */; };
 		30B28C2D16C8B24500490A9A /* second@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 30B28C2C16C8B24500490A9A /* second@2x.png */; };
 		30B28C3916C8B8A100490A9A /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30B28C3816C8B8A000490A9A /* TableViewController.m */; };
+		30B28C3E16CB3BA200490A9A /* ResearchDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = 30B28C3C16CB3BA200490A9A /* ResearchDetail.m */; };
+		30B28C3F16CB3BA200490A9A /* ResearchDetail.xib in Resources */ = {isa = PBXBuildFile; fileRef = 30B28C3D16CB3BA200490A9A /* ResearchDetail.xib */; };
+		30B28C4116CB604700490A9A /* jokeicon.png in Resources */ = {isa = PBXBuildFile; fileRef = 30B28C4016CB604700490A9A /* jokeicon.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,12 +47,14 @@
 		30B28C2116C8B24500490A9A /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
 		30B28C2316C8B24500490A9A /* first.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = first.png; sourceTree = "<group>"; };
 		30B28C2516C8B24500490A9A /* first@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "first@2x.png"; sourceTree = "<group>"; };
-		30B28C2716C8B24500490A9A /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
-		30B28C2816C8B24500490A9A /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
 		30B28C2A16C8B24500490A9A /* second.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = second.png; sourceTree = "<group>"; };
 		30B28C2C16C8B24500490A9A /* second@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "second@2x.png"; sourceTree = "<group>"; };
 		30B28C3716C8B8A000490A9A /* TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewController.h; sourceTree = "<group>"; };
 		30B28C3816C8B8A000490A9A /* TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewController.m; sourceTree = "<group>"; };
+		30B28C3B16CB3BA200490A9A /* ResearchDetail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResearchDetail.h; sourceTree = "<group>"; };
+		30B28C3C16CB3BA200490A9A /* ResearchDetail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResearchDetail.m; sourceTree = "<group>"; };
+		30B28C3D16CB3BA200490A9A /* ResearchDetail.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ResearchDetail.xib; sourceTree = "<group>"; };
+		30B28C4016CB604700490A9A /* jokeicon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = jokeicon.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,14 +107,16 @@
 				30B28C2016C8B24500490A9A /* FirstViewController.h */,
 				30B28C2116C8B24500490A9A /* FirstViewController.m */,
 				30B28C2316C8B24500490A9A /* first.png */,
+				30B28C4016CB604700490A9A /* jokeicon.png */,
 				30B28C2516C8B24500490A9A /* first@2x.png */,
-				30B28C2716C8B24500490A9A /* SecondViewController.h */,
-				30B28C2816C8B24500490A9A /* SecondViewController.m */,
 				30B28C2A16C8B24500490A9A /* second.png */,
 				30B28C2C16C8B24500490A9A /* second@2x.png */,
 				30B28C0C16C8B24500490A9A /* Supporting Files */,
 				30B28C3716C8B8A000490A9A /* TableViewController.h */,
 				30B28C3816C8B8A000490A9A /* TableViewController.m */,
+				30B28C3B16CB3BA200490A9A /* ResearchDetail.h */,
+				30B28C3C16CB3BA200490A9A /* ResearchDetail.m */,
+				30B28C3D16CB3BA200490A9A /* ResearchDetail.xib */,
 			);
 			path = MDF1_week2;
 			sourceTree = "<group>";
@@ -189,6 +195,8 @@
 				30B28C2616C8B24500490A9A /* first@2x.png in Resources */,
 				30B28C2B16C8B24500490A9A /* second.png in Resources */,
 				30B28C2D16C8B24500490A9A /* second@2x.png in Resources */,
+				30B28C3F16CB3BA200490A9A /* ResearchDetail.xib in Resources */,
+				30B28C4116CB604700490A9A /* jokeicon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -202,8 +210,8 @@
 				30B28C1216C8B24500490A9A /* main.m in Sources */,
 				30B28C1616C8B24500490A9A /* AppDelegate.m in Sources */,
 				30B28C2216C8B24500490A9A /* FirstViewController.m in Sources */,
-				30B28C2916C8B24500490A9A /* SecondViewController.m in Sources */,
 				30B28C3916C8B8A100490A9A /* TableViewController.m in Sources */,
+				30B28C3E16CB3BA200490A9A /* ResearchDetail.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

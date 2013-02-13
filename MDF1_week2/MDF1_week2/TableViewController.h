@@ -10,7 +10,14 @@
 
 @interface TableViewController : UITableViewController <UITableViewDelegate>
 {
-    
+    NSMutableArray *listOfArticles;
+    NSArray *arrayOfDictionaries;
+    NSDictionary *firstArticle;
+    NSDictionary *secondArticle;
+    NSDictionary *thirdArticle;
+    NSDictionary *fourthArticle;
+    NSDictionary *fifthArticle;
+    NSDictionary *thisDictionary;
 }
 
 @end
