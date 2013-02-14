@@ -7,7 +7,9 @@
 //
 
 #import "TableViewController.h"
+#import "FirstViewController.h"
 #import "ResearchDetail.h"
+#import "AppDelegate.h"
 
 @interface TableViewController ()
 
@@ -24,8 +26,24 @@
     return self;
 }
 
+int backgroundColorTag;
+
 - (void)viewDidLoad
 {
+    AppDelegate *accessAppDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    if (accessAppDelegate.backgroundColorTag == 0)
+    {
+        self.view.backgroundColor = [UIColor whiteColor];
+    } else if (accessAppDelegate.backgroundColorTag == 1)
+    {
+        self.view.backgroundColor = [UIColor blueColor];
+    } else if (accessAppDelegate.backgroundColorTag == 2)
+    {
+        self.view.backgroundColor = [UIColor orangeColor];
+    } else
+    {
+        //do nothing
+    }
     listOfArticles = [[NSMutableArray alloc] initWithObjects:
                                       @"A Formal Software Testing Technique",
                                       @"Improving Software Testing Process",

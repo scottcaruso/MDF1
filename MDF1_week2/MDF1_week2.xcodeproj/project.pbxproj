@@ -26,6 +26,9 @@
 		30B28C3E16CB3BA200490A9A /* ResearchDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = 30B28C3C16CB3BA200490A9A /* ResearchDetail.m */; };
 		30B28C3F16CB3BA200490A9A /* ResearchDetail.xib in Resources */ = {isa = PBXBuildFile; fileRef = 30B28C3D16CB3BA200490A9A /* ResearchDetail.xib */; };
 		30B28C4116CB604700490A9A /* jokeicon.png in Resources */ = {isa = PBXBuildFile; fileRef = 30B28C4016CB604700490A9A /* jokeicon.png */; };
+		30B28C6016CC9DD300490A9A /* KnockKnockJoke.m in Sources */ = {isa = PBXBuildFile; fileRef = 30B28C5F16CC9DD300490A9A /* KnockKnockJoke.m */; };
+		30B28C6316CCA1DC00490A9A /* homeicon.png in Resources */ = {isa = PBXBuildFile; fileRef = 30B28C6216CCA1DB00490A9A /* homeicon.png */; };
+		30B28C6716CCA2FF00490A9A /* QA.png in Resources */ = {isa = PBXBuildFile; fileRef = 30B28C6616CCA2FF00490A9A /* QA.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,6 +58,10 @@
 		30B28C3C16CB3BA200490A9A /* ResearchDetail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResearchDetail.m; sourceTree = "<group>"; };
 		30B28C3D16CB3BA200490A9A /* ResearchDetail.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ResearchDetail.xib; sourceTree = "<group>"; };
 		30B28C4016CB604700490A9A /* jokeicon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = jokeicon.png; sourceTree = "<group>"; };
+		30B28C5E16CC9DD200490A9A /* KnockKnockJoke.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KnockKnockJoke.h; sourceTree = "<group>"; };
+		30B28C5F16CC9DD300490A9A /* KnockKnockJoke.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KnockKnockJoke.m; sourceTree = "<group>"; };
+		30B28C6216CCA1DB00490A9A /* homeicon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = homeicon.png; sourceTree = "<group>"; };
+		30B28C6616CCA2FF00490A9A /* QA.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = QA.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,9 +111,11 @@
 				30B28C1416C8B24500490A9A /* AppDelegate.h */,
 				30B28C1516C8B24500490A9A /* AppDelegate.m */,
 				30B28C1D16C8B24500490A9A /* MainStoryboard.storyboard */,
+				30B28C6216CCA1DB00490A9A /* homeicon.png */,
 				30B28C2016C8B24500490A9A /* FirstViewController.h */,
 				30B28C2116C8B24500490A9A /* FirstViewController.m */,
 				30B28C2316C8B24500490A9A /* first.png */,
+				30B28C6616CCA2FF00490A9A /* QA.png */,
 				30B28C4016CB604700490A9A /* jokeicon.png */,
 				30B28C2516C8B24500490A9A /* first@2x.png */,
 				30B28C2A16C8B24500490A9A /* second.png */,
@@ -117,6 +126,8 @@
 				30B28C3B16CB3BA200490A9A /* ResearchDetail.h */,
 				30B28C3C16CB3BA200490A9A /* ResearchDetail.m */,
 				30B28C3D16CB3BA200490A9A /* ResearchDetail.xib */,
+				30B28C5E16CC9DD200490A9A /* KnockKnockJoke.h */,
+				30B28C5F16CC9DD300490A9A /* KnockKnockJoke.m */,
 			);
 			path = MDF1_week2;
 			sourceTree = "<group>";
@@ -197,6 +208,8 @@
 				30B28C2D16C8B24500490A9A /* second@2x.png in Resources */,
 				30B28C3F16CB3BA200490A9A /* ResearchDetail.xib in Resources */,
 				30B28C4116CB604700490A9A /* jokeicon.png in Resources */,
+				30B28C6316CCA1DC00490A9A /* homeicon.png in Resources */,
+				30B28C6716CCA2FF00490A9A /* QA.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -212,6 +225,7 @@
 				30B28C2216C8B24500490A9A /* FirstViewController.m in Sources */,
 				30B28C3916C8B8A100490A9A /* TableViewController.m in Sources */,
 				30B28C3E16CB3BA200490A9A /* ResearchDetail.m in Sources */,
+				30B28C6016CC9DD300490A9A /* KnockKnockJoke.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -330,6 +344,7 @@
 				30B28C3216C8B24500490A9A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

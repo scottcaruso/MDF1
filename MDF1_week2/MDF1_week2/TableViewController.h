@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "FirstViewController.h"
 
 @interface TableViewController : UITableViewController <UITableViewDelegate>
 {
@@ -19,5 +20,7 @@
     NSDictionary *fifthArticle;
     NSDictionary *thisDictionary;
 }
+
+@property (nonatomic) int backgroundColorTag;
 
 @end

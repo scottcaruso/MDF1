@@ -1,19 +1,19 @@
 //
-//  ResearchDetail.m
+//  KnockKnockJoke.m
 //  MDF1_week2
 //
-//  Created by Scott Caruso on 2/12/13.
+//  Created by Scott Caruso on 2/13/13.
 //  Copyright (c) 2013 Scott Caruso. All rights reserved.
 //
 
-#import "ResearchDetail.h"
+#import "KnockKnockJoke.h"
 #import "AppDelegate.h"
 
-@interface ResearchDetail ()
+@interface KnockKnockJoke ()
 
 @end
 
-@implementation ResearchDetail
+@implementation KnockKnockJoke
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -41,18 +41,13 @@
         //do nothing
     }
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+	// Do any additional setup after loading the view.
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
-}
-
--(IBAction)returnToList:(id)selector
-{
-    [self dismissViewControllerAnimated:TRUE completion:nil]; //dismiss the ViewController and return to the main view
 }
 
 @end

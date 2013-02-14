@@ -4,7 +4,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1930"/>
     </dependencies>
     <scenes>
-        <!--First View Controller - First-->
+        <!--First View Controller - Home-->
         <scene sceneID="11">
             <objects>
                 <viewController id="2" customClass="FirstViewController" sceneMemberID="viewController">
@@ -12,13 +12,12 @@
                         <rect key="frame" x="0.0" y="20" width="768" height="955"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="First View" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="18">
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Welcome!" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="18">
                                 <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="36"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" delaysContentTouches="NO" canCancelContentTouches="NO" minimumZoomScale="0.0" maximumZoomScale="0.0" bouncesZoom="NO" editable="NO" text="This is the default view the user will see when he loads the application." textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="19">
+                            <textView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" delaysContentTouches="NO" canCancelContentTouches="NO" minimumZoomScale="0.0" maximumZoomScale="0.0" bouncesZoom="NO" editable="NO" text="Please select your desired application viewing experience." textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="19">
                                 <constraints>
                                     <constraint firstAttribute="width" constant="268" id="Ka6-KM-ccG"/>
                                     <constraint firstAttribute="height" constant="52" id="WjI-Y1-VAs"/>
@@ -29,26 +28,55 @@
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="20">
                                 <items/>
                             </toolbar>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="QLN-5D-Zht">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="353" id="Rro-pO-WNu"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="Default"/>
+                                    <segment title="Blue"/>
+                                    <segment title="Orange"/>
+                                </segments>
+                                <connections>
+                                    <action selector="backgroundSwitch:" destination="2" eventType="valueChanged" id="ZB0-jw-XTr"/>
+                                </connections>
+                            </segmentedControl>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Background Color" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5q0-Oq-FVZ">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="5q0-Oq-FVZ" firstAttribute="centerX" secondItem="QLN-5D-Zht" secondAttribute="centerX" type="default" id="0GF-SV-wZX"/>
                             <constraint firstItem="20" firstAttribute="leading" secondItem="17" secondAttribute="leading" type="default" id="21X-Fc-h5m"/>
                             <constraint firstItem="20" firstAttribute="top" secondItem="17" secondAttribute="top" type="default" id="82v-FK-dPD"/>
                             <constraint firstItem="18" firstAttribute="leading" secondItem="17" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="9xU-8S-4zl"/>
                             <constraint firstAttribute="trailing" secondItem="18" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="GbQ-Sy-14J"/>
+                            <constraint firstItem="5q0-Oq-FVZ" firstAttribute="top" secondItem="17" secondAttribute="top" constant="429" id="Luw-yR-0KL"/>
                             <constraint firstItem="19" firstAttribute="centerX" secondItem="18" secondAttribute="centerX" type="default" id="b0V-hJ-9Xa"/>
                             <constraint firstItem="20" firstAttribute="trailing" secondItem="17" secondAttribute="trailing" type="default" id="i7B-V8-9lR"/>
+                            <constraint firstItem="QLN-5D-Zht" firstAttribute="top" secondItem="17" secondAttribute="top" constant="473" id="k6F-dZ-7Qq"/>
                             <constraint firstItem="18" firstAttribute="top" secondItem="17" secondAttribute="top" constant="250" id="oEv-T3-Vih"/>
                             <constraint firstItem="19" firstAttribute="top" secondItem="17" secondAttribute="top" constant="350" id="pKg-gt-hVJ"/>
+                            <constraint firstItem="5q0-Oq-FVZ" firstAttribute="centerX" secondItem="19" secondAttribute="centerX" type="default" id="v5T-Dv-gP4"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="First" image="first" id="7"/>
+                    <tabBarItem key="tabBarItem" title="Home" image="homeicon.png" id="7"/>
+                    <navigationItem key="navigationItem" id="cab-5i-8Wp"/>
+                    <connections>
+                        <outlet property="backgroundColor" destination="QLN-5D-Zht" id="XjI-eL-4io"/>
+                        <outlet property="backgroundColorLabel" destination="5q0-Oq-FVZ" id="rxb-er-Izd"/>
+                        <outlet property="pleaseSelectExperience" destination="19" id="zfC-rq-CpV"/>
+                        <outlet property="welcome" destination="18" id="fdd-Kr-9yq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="10" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3013" y="-1098"/>
         </scene>
-        <!--Table View Controller - Table View Controller-->
+        <!--Table View Controller - QA-Related Articles-->
         <scene sceneID="2Wd-4b-a0v">
             <objects>
                 <tableViewController id="Uwo-dD-YNr" customClass="TableViewController" sceneMemberID="viewController">
@@ -72,7 +100,7 @@
                             <outlet property="delegate" destination="Uwo-dD-YNr" id="5dJ-0L-VID"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Table View Controller" id="LoP-LR-Sks"/>
+                    <tabBarItem key="tabBarItem" title="QA-Related Articles" image="QA.png" id="LoP-LR-Sks"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4fH-Kk-f5O" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -94,10 +122,10 @@
             </objects>
             <point key="canvasLocation" x="3010" y="1299"/>
         </scene>
-        <!--View Controller - Knock Knock!-->
+        <!--Knock Knock Joke - Knock Knock!-->
         <scene sceneID="0Fr-cx-Jgg">
             <objects>
-                <viewController id="XDg-zl-cCS" sceneMemberID="viewController">
+                <viewController id="XDg-zl-cCS" customClass="KnockKnockJoke" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Lop-5k-6eF">
                         <rect key="frame" x="0.0" y="64" width="768" height="911"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -142,10 +170,10 @@
             </objects>
             <point key="canvasLocation" x="3870" y="1287"/>
         </scene>
-        <!--View Controller - Who's There?-->
+        <!--Knock Knock Joke - Who's There?-->
         <scene sceneID="Ynk-01-5TJ">
             <objects>
-                <viewController id="CbQ-tr-gpY" sceneMemberID="viewController">
+                <viewController id="CbQ-tr-gpY" customClass="KnockKnockJoke" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="i8q-kO-Tw7">
                         <rect key="frame" x="0.0" y="64" width="768" height="911"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -187,10 +215,10 @@
             </objects>
             <point key="canvasLocation" x="4814" y="1299"/>
         </scene>
-        <!--View Controller - A Cow Goes Who?-->
+        <!--Knock Knock Joke - A Cow Goes Who?-->
         <scene sceneID="zqq-ml-m92">
             <objects>
-                <viewController id="RR1-YW-3md" sceneMemberID="viewController">
+                <viewController id="RR1-YW-3md" customClass="KnockKnockJoke" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="VVf-9G-m5u">
                         <rect key="frame" x="0.0" y="64" width="768" height="911"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -221,6 +249,7 @@
         <scene sceneID="15">
             <objects>
                 <tabBarController id="4" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="Uy0-Gs-yMC"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="5">
                         <rect key="frame" x="0.0" y="975" width="768" height="49"/>
@@ -239,12 +268,25 @@
         </scene>
     </scenes>
     <resources>
-        <image name="first" width="16" height="16"/>
+        <image name="QA.png" width="32" height="32"/>
+        <image name="homeicon.png" width="32" height="32"/>
         <image name="jokeicon.png" width="32" height="32"/>
     </resources>
     <classes>
         <class className="FirstViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/FirstViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="backgroundSwitch:"/>
+                <relationship kind="outlet" name="backgroundColor" candidateClass="UISegmentedControl"/>
+                <relationship kind="outlet" name="backgroundColorLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="fontLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="fontStyle" candidateClass="UISegmentedControl"/>
+                <relationship kind="outlet" name="pleaseSelectExperience" candidateClass="UITextView"/>
+                <relationship kind="outlet" name="welcome" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="KnockKnockJoke" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/KnockKnockJoke.h"/>
         </class>
         <class className="NSLayoutConstraint" superclassName="NSObject">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>

@@ -19,6 +19,7 @@
 @property (nonatomic, retain) IBOutlet UILabel *publication;
 @property (nonatomic, retain) IBOutlet UILabel *publicationDate;
 @property (nonatomic, retain) IBOutlet UITextView *abstract;
+@property (nonatomic) int backgroundColorTag;
 
 -(IBAction)returnToList:(id)selector;
 
