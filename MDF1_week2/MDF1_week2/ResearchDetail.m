@@ -26,6 +26,7 @@
 
 - (void)viewDidLoad
 {
+    //Access the AppDelegate and set the background color based on the value saved
     AppDelegate *accessAppDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
     if (accessAppDelegate.backgroundColorTag == 0)
     {
@@ -50,6 +51,7 @@
     // Dispose of any resources that can be recreated.
 }
 
+//Dismiss this view and return to the listview
 -(IBAction)returnToList:(id)selector
 {
     [self dismissViewControllerAnimated:TRUE completion:nil]; //dismiss the ViewController and return to the main view

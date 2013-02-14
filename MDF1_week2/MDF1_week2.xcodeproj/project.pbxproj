@@ -18,10 +18,6 @@
 		30B28C1C16C8B24500490A9A /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 30B28C1B16C8B24500490A9A /* Default-568h@2x.png */; };
 		30B28C1F16C8B24500490A9A /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30B28C1D16C8B24500490A9A /* MainStoryboard.storyboard */; };
 		30B28C2216C8B24500490A9A /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30B28C2116C8B24500490A9A /* FirstViewController.m */; };
-		30B28C2416C8B24500490A9A /* first.png in Resources */ = {isa = PBXBuildFile; fileRef = 30B28C2316C8B24500490A9A /* first.png */; };
-		30B28C2616C8B24500490A9A /* first@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 30B28C2516C8B24500490A9A /* first@2x.png */; };
-		30B28C2B16C8B24500490A9A /* second.png in Resources */ = {isa = PBXBuildFile; fileRef = 30B28C2A16C8B24500490A9A /* second.png */; };
-		30B28C2D16C8B24500490A9A /* second@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 30B28C2C16C8B24500490A9A /* second@2x.png */; };
 		30B28C3916C8B8A100490A9A /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30B28C3816C8B8A000490A9A /* TableViewController.m */; };
 		30B28C3E16CB3BA200490A9A /* ResearchDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = 30B28C3C16CB3BA200490A9A /* ResearchDetail.m */; };
 		30B28C3F16CB3BA200490A9A /* ResearchDetail.xib in Resources */ = {isa = PBXBuildFile; fileRef = 30B28C3D16CB3BA200490A9A /* ResearchDetail.xib */; };
@@ -48,10 +44,6 @@
 		30B28C1E16C8B24500490A9A /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		30B28C2016C8B24500490A9A /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
 		30B28C2116C8B24500490A9A /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
-		30B28C2316C8B24500490A9A /* first.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = first.png; sourceTree = "<group>"; };
-		30B28C2516C8B24500490A9A /* first@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "first@2x.png"; sourceTree = "<group>"; };
-		30B28C2A16C8B24500490A9A /* second.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = second.png; sourceTree = "<group>"; };
-		30B28C2C16C8B24500490A9A /* second@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "second@2x.png"; sourceTree = "<group>"; };
 		30B28C3716C8B8A000490A9A /* TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewController.h; sourceTree = "<group>"; };
 		30B28C3816C8B8A000490A9A /* TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewController.m; sourceTree = "<group>"; };
 		30B28C3B16CB3BA200490A9A /* ResearchDetail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResearchDetail.h; sourceTree = "<group>"; };
@@ -111,15 +103,8 @@
 				30B28C1416C8B24500490A9A /* AppDelegate.h */,
 				30B28C1516C8B24500490A9A /* AppDelegate.m */,
 				30B28C1D16C8B24500490A9A /* MainStoryboard.storyboard */,
-				30B28C6216CCA1DB00490A9A /* homeicon.png */,
 				30B28C2016C8B24500490A9A /* FirstViewController.h */,
 				30B28C2116C8B24500490A9A /* FirstViewController.m */,
-				30B28C2316C8B24500490A9A /* first.png */,
-				30B28C6616CCA2FF00490A9A /* QA.png */,
-				30B28C4016CB604700490A9A /* jokeicon.png */,
-				30B28C2516C8B24500490A9A /* first@2x.png */,
-				30B28C2A16C8B24500490A9A /* second.png */,
-				30B28C2C16C8B24500490A9A /* second@2x.png */,
 				30B28C0C16C8B24500490A9A /* Supporting Files */,
 				30B28C3716C8B8A000490A9A /* TableViewController.h */,
 				30B28C3816C8B8A000490A9A /* TableViewController.m */,
@@ -128,6 +113,9 @@
 				30B28C3D16CB3BA200490A9A /* ResearchDetail.xib */,
 				30B28C5E16CC9DD200490A9A /* KnockKnockJoke.h */,
 				30B28C5F16CC9DD300490A9A /* KnockKnockJoke.m */,
+				30B28C6216CCA1DB00490A9A /* homeicon.png */,
+				30B28C6616CCA2FF00490A9A /* QA.png */,
+				30B28C4016CB604700490A9A /* jokeicon.png */,
 			);
 			path = MDF1_week2;
 			sourceTree = "<group>";
@@ -202,10 +190,6 @@
 				30B28C1A16C8B24500490A9A /* Default@2x.png in Resources */,
 				30B28C1C16C8B24500490A9A /* Default-568h@2x.png in Resources */,
 				30B28C1F16C8B24500490A9A /* MainStoryboard.storyboard in Resources */,
-				30B28C2416C8B24500490A9A /* first.png in Resources */,
-				30B28C2616C8B24500490A9A /* first@2x.png in Resources */,
-				30B28C2B16C8B24500490A9A /* second.png in Resources */,
-				30B28C2D16C8B24500490A9A /* second@2x.png in Resources */,
 				30B28C3F16CB3BA200490A9A /* ResearchDetail.xib in Resources */,
 				30B28C4116CB604700490A9A /* jokeicon.png in Resources */,
 				30B28C6316CCA1DC00490A9A /* homeicon.png in Resources */,

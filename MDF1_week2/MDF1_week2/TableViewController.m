@@ -30,6 +30,7 @@ int backgroundColorTag;
 
 - (void)viewDidLoad
 {
+    //Access the app delegate, read the background color tag, and set the view background accordingly
     AppDelegate *accessAppDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
     if (accessAppDelegate.backgroundColorTag == 0)
     {
@@ -44,6 +45,7 @@ int backgroundColorTag;
     {
         //do nothing
     }
+    //The following simply populate the article list and specific articles with information.
     listOfArticles = [[NSMutableArray alloc] initWithObjects:
                                       @"A Formal Software Testing Technique",
                                       @"Improving Software Testing Process",
@@ -114,7 +116,7 @@ int backgroundColorTag;
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return [listOfArticles count];
+    return [listOfArticles count]; //set the listview with the correct number of articles
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -129,45 +131,6 @@ int backgroundColorTag;
     return cell;
 }
 
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
-
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    }   
-    else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
-{
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
 #pragma mark - Table view delegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
@@ -177,6 +140,7 @@ int backgroundColorTag;
     {
         [self presentViewController:detailView animated:TRUE completion:nil];
         arrayOfDictionaries = [[NSArray alloc] initWithObjects:firstArticle,secondArticle,thirdArticle,fourthArticle,fifthArticle, nil];
+        //loop through the dictionaries. once there is a match between a dictionary and the current row, display that information
         for (int x = 0; x<[arrayOfDictionaries count]; x++)
         {
             if (x == indexPath.row)

@@ -10,15 +10,14 @@
 
 @interface FirstViewController : UIViewController
 {
+    //Outlets for the labels and control in the Main View
     IBOutlet UILabel *welcome;
     IBOutlet UITextView *pleaseSelectExperience;
     IBOutlet UILabel *backgroundColorLabel;
-    IBOutlet UILabel *fontLabel;
     IBOutlet UISegmentedControl *backgroundColor;
-    IBOutlet UISegmentedControl *fontStyle;
 }
 
-- (IBAction)backgroundSwitch:(id)sender;
+- (IBAction)backgroundSwitch:(id)sender; //controls the background color switch
 
 @end
 

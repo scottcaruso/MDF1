@@ -13,14 +13,15 @@
     IBOutlet UIButton *returnToMain;
 }
 
+//Set all of the properties that need to be filled in so that they can be passed into this view.
 @property (nonatomic, retain) IBOutlet UILabel *articleURL;
 @property (nonatomic, retain) IBOutlet UILabel *articleTitle;
 @property (nonatomic, retain) IBOutlet UILabel *authorName;
 @property (nonatomic, retain) IBOutlet UILabel *publication;
 @property (nonatomic, retain) IBOutlet UILabel *publicationDate;
 @property (nonatomic, retain) IBOutlet UITextView *abstract;
-@property (nonatomic) int backgroundColorTag;
 
+//Return to the TableView
 -(IBAction)returnToList:(id)selector;
 
 @end

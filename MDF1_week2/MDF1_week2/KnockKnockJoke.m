@@ -26,6 +26,7 @@
 
 - (void)viewDidLoad
 {
+    //Set the background color based on what is currently saved in the AppDelegate.
     AppDelegate *accessAppDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
     if (accessAppDelegate.backgroundColorTag == 0)
     {

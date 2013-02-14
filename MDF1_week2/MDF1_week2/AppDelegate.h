@@ -13,6 +13,6 @@
 }
 
 @property (strong, nonatomic) UIWindow *window;
-@property (nonatomic) int backgroundColorTag;
+@property (nonatomic) int backgroundColorTag; //this property manages the background color for the entire application
 
 @end

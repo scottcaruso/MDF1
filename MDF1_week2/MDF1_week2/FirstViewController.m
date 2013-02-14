@@ -29,12 +29,13 @@
     // Dispose of any resources that can be recreated.
 }
 
+//Controls the segment control for the background color
 - (IBAction)backgroundSwitch:(id)sender {
     UISegmentedControl *thisControl = (UISegmentedControl*) sender;
     NSInteger selectedSegment = thisControl.selectedSegmentIndex;
-    AppDelegate *accessAppDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    AppDelegate *accessAppDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate]; //instantiate and access the App Delegate
     if (selectedSegment == 0) {
-        accessAppDelegate.backgroundColorTag = 0;
+        accessAppDelegate.backgroundColorTag = 0; //update the background color tag in the App Delegate
         self.view.backgroundColor = [UIColor whiteColor];
     }
     else if (selectedSegment == 1){
