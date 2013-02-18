@@ -28,19 +28,19 @@
 {
     //Set the background color based on what is currently saved in the AppDelegate.
     AppDelegate *accessAppDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
-    if (accessAppDelegate.backgroundColorTag == 0)
-    {
-        self.view.backgroundColor = [UIColor whiteColor];
-    } else if (accessAppDelegate.backgroundColorTag == 1)
-    {
-        self.view.backgroundColor = [UIColor blueColor];
-    } else if (accessAppDelegate.backgroundColorTag == 2)
-    {
-        self.view.backgroundColor = [UIColor orangeColor];
-    } else
-    {
-        //do nothing
-    }
+     if (accessAppDelegate.backgroundColorTag == 0)
+     {
+     self.view.backgroundColor = [UIColor whiteColor];
+     } else if (accessAppDelegate.backgroundColorTag == 1)
+     {
+     self.view.backgroundColor = [UIColor blueColor];
+     } else if (accessAppDelegate.backgroundColorTag == 2)
+     {
+     self.view.backgroundColor = [UIColor orangeColor];
+     } else
+     {
+     //do nothing
+     }
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
 }
