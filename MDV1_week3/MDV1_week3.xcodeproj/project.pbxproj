@@ -23,6 +23,7 @@
 		30DFE71416D2CC4B0013D21B /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30DFE71316D2CC4B0013D21B /* SecondViewController.m */; };
 		30DFE71616D2CC4B0013D21B /* second.png in Resources */ = {isa = PBXBuildFile; fileRef = 30DFE71516D2CC4B0013D21B /* second.png */; };
 		30DFE71816D2CC4B0013D21B /* second@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 30DFE71716D2CC4B0013D21B /* second@2x.png */; };
+		30DFE71F16D2EF370013D21B /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30DFE71E16D2EF370013D21B /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +49,7 @@
 		30DFE71316D2CC4B0013D21B /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
 		30DFE71516D2CC4B0013D21B /* second.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = second.png; sourceTree = "<group>"; };
 		30DFE71716D2CC4B0013D21B /* second@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "second@2x.png"; sourceTree = "<group>"; };
+		30DFE71E16D2EF370013D21B /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				30DFE71F16D2EF370013D21B /* MapKit.framework in Frameworks */,
 				30DFE6F116D2CC4B0013D21B /* UIKit.framework in Frameworks */,
 				30DFE6F316D2CC4B0013D21B /* Foundation.framework in Frameworks */,
 				30DFE6F516D2CC4B0013D21B /* CoreGraphics.framework in Frameworks */,
@@ -67,6 +70,7 @@
 		30DFE6E116D2CC4B0013D21B = {
 			isa = PBXGroup;
 			children = (
+				30DFE71E16D2EF370013D21B /* MapKit.framework */,
 				30DFE6F616D2CC4B0013D21B /* MDV1_week3 */,
 				30DFE6EF16D2CC4B0013D21B /* Frameworks */,
 				30DFE6ED16D2CC4B0013D21B /* Products */,
