@@ -17,13 +17,13 @@
 		30DFE70516D2CC4B0013D21B /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 30DFE70416D2CC4B0013D21B /* Default@2x.png */; };
 		30DFE70716D2CC4B0013D21B /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 30DFE70616D2CC4B0013D21B /* Default-568h@2x.png */; };
 		30DFE70A16D2CC4B0013D21B /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30DFE70816D2CC4B0013D21B /* MainStoryboard.storyboard */; };
-		30DFE70D16D2CC4B0013D21B /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30DFE70C16D2CC4B0013D21B /* FirstViewController.m */; };
 		30DFE70F16D2CC4B0013D21B /* first.png in Resources */ = {isa = PBXBuildFile; fileRef = 30DFE70E16D2CC4B0013D21B /* first.png */; };
 		30DFE71116D2CC4B0013D21B /* first@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 30DFE71016D2CC4B0013D21B /* first@2x.png */; };
-		30DFE71416D2CC4B0013D21B /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30DFE71316D2CC4B0013D21B /* SecondViewController.m */; };
+		30DFE71416D2CC4B0013D21B /* mapController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30DFE71316D2CC4B0013D21B /* mapController.m */; };
 		30DFE71616D2CC4B0013D21B /* second.png in Resources */ = {isa = PBXBuildFile; fileRef = 30DFE71516D2CC4B0013D21B /* second.png */; };
 		30DFE71816D2CC4B0013D21B /* second@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 30DFE71716D2CC4B0013D21B /* second@2x.png */; };
 		30DFE71F16D2EF370013D21B /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30DFE71E16D2EF370013D21B /* MapKit.framework */; };
+		30DFE72216D2F0720013D21B /* tableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30DFE72116D2F0720013D21B /* tableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,15 +41,15 @@
 		30DFE70416D2CC4B0013D21B /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		30DFE70616D2CC4B0013D21B /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		30DFE70916D2CC4B0013D21B /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
-		30DFE70B16D2CC4B0013D21B /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
-		30DFE70C16D2CC4B0013D21B /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
 		30DFE70E16D2CC4B0013D21B /* first.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = first.png; sourceTree = "<group>"; };
 		30DFE71016D2CC4B0013D21B /* first@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "first@2x.png"; sourceTree = "<group>"; };
-		30DFE71216D2CC4B0013D21B /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
-		30DFE71316D2CC4B0013D21B /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
+		30DFE71216D2CC4B0013D21B /* mapController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = mapController.h; sourceTree = "<group>"; };
+		30DFE71316D2CC4B0013D21B /* mapController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = mapController.m; sourceTree = "<group>"; };
 		30DFE71516D2CC4B0013D21B /* second.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = second.png; sourceTree = "<group>"; };
 		30DFE71716D2CC4B0013D21B /* second@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "second@2x.png"; sourceTree = "<group>"; };
 		30DFE71E16D2EF370013D21B /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		30DFE72016D2F0720013D21B /* tableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tableViewController.h; sourceTree = "<group>"; };
+		30DFE72116D2F0720013D21B /* tableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = tableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,12 +101,12 @@
 				30DFE6FF16D2CC4B0013D21B /* AppDelegate.h */,
 				30DFE70016D2CC4B0013D21B /* AppDelegate.m */,
 				30DFE70816D2CC4B0013D21B /* MainStoryboard.storyboard */,
-				30DFE70B16D2CC4B0013D21B /* FirstViewController.h */,
-				30DFE70C16D2CC4B0013D21B /* FirstViewController.m */,
 				30DFE70E16D2CC4B0013D21B /* first.png */,
 				30DFE71016D2CC4B0013D21B /* first@2x.png */,
-				30DFE71216D2CC4B0013D21B /* SecondViewController.h */,
-				30DFE71316D2CC4B0013D21B /* SecondViewController.m */,
+				30DFE72016D2F0720013D21B /* tableViewController.h */,
+				30DFE72116D2F0720013D21B /* tableViewController.m */,
+				30DFE71216D2CC4B0013D21B /* mapController.h */,
+				30DFE71316D2CC4B0013D21B /* mapController.m */,
 				30DFE71516D2CC4B0013D21B /* second.png */,
 				30DFE71716D2CC4B0013D21B /* second@2x.png */,
 				30DFE6F716D2CC4B0013D21B /* Supporting Files */,
@@ -200,8 +200,8 @@
 			files = (
 				30DFE6FD16D2CC4B0013D21B /* main.m in Sources */,
 				30DFE70116D2CC4B0013D21B /* AppDelegate.m in Sources */,
-				30DFE70D16D2CC4B0013D21B /* FirstViewController.m in Sources */,
-				30DFE71416D2CC4B0013D21B /* SecondViewController.m in Sources */,
+				30DFE71416D2CC4B0013D21B /* mapController.m in Sources */,
+				30DFE72216D2F0720013D21B /* tableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

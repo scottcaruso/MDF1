@@ -1,5 +1,5 @@
 //
-//  FirstViewController.h
+//  tableViewController.h
 //  MDV1_week3
 //
 //  Created by Scott Caruso on 2/18/13.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface FirstViewController : UIViewController
+@interface tableViewController : UITableViewController
 
 @end

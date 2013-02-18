@@ -9,6 +9,6 @@
 #import <UIKit/UIKit.h>
 #import <MapKit/MapKit.h>
 
-@interface SecondViewController : UIViewController <MKMapViewDelegate>
+@interface mapController : UIViewController <MKMapViewDelegate>
 
 @end
