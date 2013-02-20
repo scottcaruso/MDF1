@@ -10,5 +10,8 @@
 #import <MapKit/MapKit.h>
 
 @interface mapController : UIViewController <MKMapViewDelegate>
+{
+    IBOutlet MKMapView *appMap;
+}
 
 @end

@@ -34,10 +34,10 @@
             </objects>
             <point key="canvasLocation" x="3041" y="122"/>
         </scene>
-        <!--Second View Controller - Map-->
+        <!--Map Controller - Map-->
         <scene sceneID="13">
             <objects>
-                <viewController id="3" customClass="SecondViewController" sceneMemberID="viewController">
+                <viewController id="3" customClass="mapController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="16">
                         <rect key="frame" x="0.0" y="20" width="768" height="955"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -64,6 +64,9 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Map" image="second" id="6"/>
+                    <connections>
+                        <outlet property="appMap" destination="uOa-qf-iEN" id="CuW-Ih-RKF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="12" sceneMemberID="firstResponder"/>
             </objects>

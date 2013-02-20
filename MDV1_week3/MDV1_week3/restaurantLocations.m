@@ -40,7 +40,7 @@
         
         listOfDictionaries = [[NSDictionary alloc] initWithObjectsAndKeys:
                               miami, @"Miami, FL",
-                              orlando, @"Orlando,FL",
+                              orlando, @"Orlando, FL",
                               dallas, @"Dallas, TX",
                               phoenix, @"Phoenix, AZ",
                               losAngeles, @"Los Angeles, CA",

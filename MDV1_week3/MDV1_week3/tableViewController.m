@@ -26,13 +26,6 @@
 
 - (void)viewDidLoad
 {
-    restaurantLocations *locations = [[restaurantLocations alloc] init];
-    NSMutableArray *thisArray = [locations getRestaurantList];
-    NSDictionary *listOfDictionaries = [locations getListOfDictionaries];
-    NSDictionary *thisDictionary = [locations getDictionaryForItem:@"Miami, FL"];
-    NSLog(@"%@",[thisDictionary objectForKey:@"latitude"]);
-    NSLog(@"%@",[thisDictionary objectForKey:@"longitude"]);
-    
     [super viewDidLoad];
 
     // Uncomment the following line to preserve selection between presentations.
