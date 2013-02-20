@@ -40,7 +40,7 @@
             {
                 [appMap addAnnotation:thisMapNote];
             }
-        }        
+        }
     }
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
@@ -50,6 +50,22 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)mapViewDidFinishLoadingMap:(MKMapView *)mapView
+{
+    MKCoordinateSpan mapSpan;
+    mapSpan.latitudeDelta = 50.0f;
+    mapSpan.longitudeDelta = 50.0f;
+    
+    CLLocationCoordinate2D mapCenter;
+    mapCenter.latitude = 39.82f;
+    mapCenter.longitude = -98.57f;
+    
+    MKCoordinateRegion mapRegion;
+    mapRegion.span = mapSpan;
+    mapRegion.center = mapCenter;
+    [appMap setRegion:mapRegion];
 }
 
 @end
