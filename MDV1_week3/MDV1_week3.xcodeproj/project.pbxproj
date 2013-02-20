@@ -24,6 +24,7 @@
 		30DFE71816D2CC4B0013D21B /* second@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 30DFE71716D2CC4B0013D21B /* second@2x.png */; };
 		30DFE71F16D2EF370013D21B /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30DFE71E16D2EF370013D21B /* MapKit.framework */; };
 		30DFE72216D2F0720013D21B /* tableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30DFE72116D2F0720013D21B /* tableViewController.m */; };
+		30DFE72516D467C20013D21B /* restaurantLocations.m in Sources */ = {isa = PBXBuildFile; fileRef = 30DFE72416D467C20013D21B /* restaurantLocations.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +51,8 @@
 		30DFE71E16D2EF370013D21B /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		30DFE72016D2F0720013D21B /* tableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tableViewController.h; sourceTree = "<group>"; };
 		30DFE72116D2F0720013D21B /* tableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = tableViewController.m; sourceTree = "<group>"; };
+		30DFE72316D467C20013D21B /* restaurantLocations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = restaurantLocations.h; sourceTree = "<group>"; };
+		30DFE72416D467C20013D21B /* restaurantLocations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = restaurantLocations.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +112,8 @@
 				30DFE71316D2CC4B0013D21B /* mapController.m */,
 				30DFE71516D2CC4B0013D21B /* second.png */,
 				30DFE71716D2CC4B0013D21B /* second@2x.png */,
+				30DFE72316D467C20013D21B /* restaurantLocations.h */,
+				30DFE72416D467C20013D21B /* restaurantLocations.m */,
 				30DFE6F716D2CC4B0013D21B /* Supporting Files */,
 			);
 			path = MDV1_week3;
@@ -202,6 +207,7 @@
 				30DFE70116D2CC4B0013D21B /* AppDelegate.m in Sources */,
 				30DFE71416D2CC4B0013D21B /* mapController.m in Sources */,
 				30DFE72216D2F0720013D21B /* tableViewController.m in Sources */,
+				30DFE72516D467C20013D21B /* restaurantLocations.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
