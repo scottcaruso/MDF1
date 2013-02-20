@@ -25,21 +25,23 @@
     for (int x = 0; x < numberOfItems; x++)
     {
         NSDictionary *thisDictionary = [locations getDictionaryForItem:[currentList objectAtIndex:x]];
-        NSLog(@"%@",thisDictionary);
-        //CLLocationCoordinate2D thisLoc;
-        //thisLoc.latitude = *lat
-        //thisLoc.longitutde = *lon;
-        
+        NSNumber *lat = [thisDictionary objectForKey:@"latitude"];
+        NSNumber *lon = [thisDictionary objectForKey:@"longitude"];
+        int lati = [lat integerValue];
+        int longi = [lon integerValue];
+        CLLocationCoordinate2D thisLoc;
+        thisLoc.latitude = lati;
+        thisLoc.longitude = longi;
+        NSString *mapTitle = [[NSString alloc] initWithString:[currentList objectAtIndex:x]];
+        if (mapTitle != nil)
+        {
+            mapNotes *thisMapNote = [[mapNotes alloc] initWithTitle:mapTitle coord:thisLoc];
+            if (thisMapNote != nil)
+            {
+                [appMap addAnnotation:thisMapNote];
+            }
+        }        
     }
-    
-    /*CLLocationCoordinate2D orlandoloc;
-    orlandoloc.latitude = 28.55f;
-    orlandoloc.longitude = -81.33f;
-    mapNotes *thisMapNote = [[mapNotes alloc] initWithTitle:@"Orlando,FL" coord:orlandoloc];
-    if (thisMapNote != nil)
-    {
-        [appMap addAnnotation:thisMapNote];
-    }*/
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
 }
