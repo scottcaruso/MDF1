@@ -21,8 +21,9 @@
 
 -(void)viewWillAppear:(BOOL)animated
 {
-    [appMap removeAnnotations:appMap.annotations];
+    [appMap removeAnnotations:appMap.annotations]; //rremove any existing map annotations in order to reset them based on changes to the array
     int numberOfItems = [listOfRestaurants count];
+    //loop through the array and create a mapnote for each of the locations in the array
     for (int x = 0; x < numberOfItems; x++)
     {
         NSDictionary *thisDictionary = [locations getDictionaryForItem:[listOfRestaurants objectAtIndex:x]];
@@ -66,7 +67,7 @@
     mapSpan.latitudeDelta = 20.0f;
     mapSpan.longitudeDelta = 20.0f;
     
-    CLLocationCoordinate2D mapCenter;
+    CLLocationCoordinate2D mapCenter; //set the default view to the centerpoint of the United States
     mapCenter.latitude = 39.82f;
     mapCenter.longitude = -98.57f;
     

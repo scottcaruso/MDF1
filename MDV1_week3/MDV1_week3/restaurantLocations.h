@@ -25,10 +25,10 @@
     NSDictionary *listOfRestaurantNames;
 }
 
--(NSMutableArray*)getRestaurantList;
--(NSDictionary*)getListOfDictionaries;
--(NSDictionary*)getDictionaryForItem:(NSString*)arrayLocation;
--(NSDictionary*)getRestaurantNames;
--(void)updateRestaurantArray:(NSMutableArray*)restaurants;
+-(NSMutableArray*)getRestaurantList; //method that retrieves the list of restaurants from this object
+-(NSDictionary*)getListOfDictionaries; //get the dictionary of full restaurant data
+-(NSDictionary*)getDictionaryForItem:(NSString*)arrayLocation; //retrieve a specific location's dictionary value using a provided key
+-(NSDictionary*)getRestaurantNames; //method that retrieves the dictionary of restaurant names from this object
+-(void)updateRestaurantArray:(NSMutableArray*)restaurants; //method that updates this object with a new array when changes are mode
 
 @end

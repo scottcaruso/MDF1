@@ -17,9 +17,10 @@
     IBOutlet UIButton *editButton;
 }
 
-@property (readwrite, nonatomic) NSMutableArray *listOfRestaurants;
-@property (nonatomic) restaurantLocations *locations;
+@property (readwrite, nonatomic) NSMutableArray *listOfRestaurants; //prepare the list of restaurants to pass to mapController
+@property (nonatomic) restaurantLocations *locations; //prepare the locations object to pass to mapController
 
--(IBAction)editButtonClick:(id)sender;
+-(IBAction)editButtonClick:(id)sender; //activate the Edit Button on the screen
+-(void)setMapControllerProperties:(restaurantLocations*)thisLocation listOfRestaurants:(NSMutableArray*)thisRestaurantList; //This is a reusable function that updates the mapController properties on demand
 
 @end

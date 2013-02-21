@@ -15,6 +15,7 @@
     self = [super init];
     if (self != nil)
     {
+        //create a list of locations where restaurants exist
         listOfRestaurants = [[NSMutableArray alloc] initWithObjects:
                              @"Boston, MA",
                              @"Dallas, TX",
@@ -27,6 +28,7 @@
                              @"San Francisco, CA",
                              @"Scranton, PA",
                              nil];
+        //create an object for each location with latitude and longitude
         miami = [[NSDictionary alloc] initWithObjectsAndKeys: [NSNumber numberWithFloat:25.82], @"latitude",[NSNumber numberWithFloat:-80.28],@"longitude", nil];
         orlando = [[NSDictionary alloc] initWithObjectsAndKeys: [NSNumber numberWithFloat:28.43], @"latitude",[NSNumber numberWithFloat:-81.42],@"longitude", nil];
         dallas = [[NSDictionary alloc] initWithObjectsAndKeys: [NSNumber numberWithFloat:32.90], @"latitude",[NSNumber numberWithFloat:-97.03],@"longitude", nil];
@@ -38,6 +40,7 @@
         hartford = [[NSDictionary alloc] initWithObjectsAndKeys: [NSNumber numberWithFloat:41.73], @"latitude",[NSNumber numberWithFloat:-72.65],@"longitude", nil];
         boston = [[NSDictionary alloc] initWithObjectsAndKeys: [NSNumber numberWithFloat:42.37], @"latitude",[NSNumber numberWithFloat:-71.03],@"longitude", nil];
         
+        //combine the location dictionaries with the list of restaurants to create a master dictionary
         listOfDictionaries = [[NSDictionary alloc] initWithObjectsAndKeys:
                               miami, @"Miami, FL",
                               orlando, @"Orlando, FL",
@@ -51,6 +54,7 @@
                               boston, @"Boston, MA",
                               nil];
         
+        //create a list of Restaurant Names for each location
         listOfRestaurantNames = [[NSDictionary alloc] initWithObjectsAndKeys:
                                  @"Caruso's South Beach",@"Miami, FL",
                                  @"Disney Caruso", @"Orlando, FL",
@@ -68,28 +72,32 @@
     return self;
 }
 
+//method that retrieves the list of restaurants from this object
 -(NSMutableArray*)getRestaurantList
 {
     return listOfRestaurants;
 }
 
-//Mostly for debug - gets the list of Dictionaries
+//retrieve the master dictionary list
 -(NSDictionary*)getListOfDictionaries
 {
     return listOfDictionaries;
 }
 
+//retrieve a specific location's dictionary value using a provided key
 -(NSDictionary*)getDictionaryForItem:(NSString*)location
 {
     NSDictionary *thisDictionary = [listOfDictionaries objectForKey:location];
     return thisDictionary;
 }
 
+//method that retrieves the dictionary of restaurant names from this object
 -(NSDictionary*)getRestaurantNames
 {
     return listOfRestaurantNames;
 }
 
+//method that updates this object with a new array when changes are mode
 -(void)updateRestaurantArray:(NSMutableArray*)restaurants
 {
     listOfRestaurants = restaurants;

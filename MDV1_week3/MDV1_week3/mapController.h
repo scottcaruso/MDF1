@@ -16,7 +16,9 @@
     IBOutlet MKMapView *appMap;
 }
 
+//prepare mapController to accept the custom object properties from the tableview
 @property restaurantLocations *locations;
 @property NSMutableArray *listOfRestaurants;
+
 
 @end

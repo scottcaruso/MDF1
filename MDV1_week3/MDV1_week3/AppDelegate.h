@@ -8,7 +8,6 @@
 
 #import <UIKit/UIKit.h>
 #import <MapKit/MapKit.h>
-#import "restaurantLocations.h"
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 

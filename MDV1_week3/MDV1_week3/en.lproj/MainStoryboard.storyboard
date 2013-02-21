@@ -33,7 +33,7 @@
                             <constraint firstItem="23" firstAttribute="leading" secondItem="16" secondAttribute="leading" type="default" id="kTD-uS-vbp"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Map" image="second" id="6"/>
+                    <tabBarItem key="tabBarItem" title="Map" image="second.png" id="6"/>
                     <navigationItem key="navigationItem" id="pEM-wm-Mjw"/>
                     <connections>
                         <outlet property="appMap" destination="uOa-qf-iEN" id="mYR-nG-GUx"/>
@@ -134,7 +134,7 @@
                             <constraint firstItem="YC8-QQ-A3y" firstAttribute="trailing" secondItem="49L-Y5-gnl" secondAttribute="trailing" type="default" id="yvz-sj-M7O"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Restaurant List" id="iYy-Dj-o3Q"/>
+                    <tabBarItem key="tabBarItem" title="Restaurant List" image="first.png" id="iYy-Dj-o3Q"/>
                     <navigationItem key="navigationItem" id="Lfs-Yx-xgG"/>
                     <connections>
                         <outlet property="editButton" destination="ghE-cP-K7d" id="jXN-rF-raS"/>
@@ -147,7 +147,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="second" width="16" height="16"/>
+        <image name="first.png" width="32" height="32"/>
+        <image name="second.png" width="32" height="32"/>
     </resources>
     <classes>
         <class className="NSLayoutConstraint" superclassName="NSObject">

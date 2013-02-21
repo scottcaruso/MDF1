@@ -21,12 +21,9 @@
 
 - (void)viewDidLoad
 {
-    locations = [[restaurantLocations alloc] init];
-    listOfRestaurants = [locations getRestaurantList];
-    NSArray *views = [self.tabBarController viewControllers];
-    mapController *mapView = (mapController*) [views objectAtIndex:1];
-    mapView.locations = locations;
-    mapView.listOfRestaurants = listOfRestaurants;
+    locations = [[restaurantLocations alloc] init]; //initialize the locations object
+    listOfRestaurants = [locations getRestaurantList]; //access the restaurants array in the custom object
+    [self setMapControllerProperties:locations listOfRestaurants:listOfRestaurants]; //set the mapController properties to default values
     [super viewDidLoad];
 }
 
@@ -47,15 +44,6 @@
     return cell;
 }
 
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
-
 //The function to set the editing style to delete mode when editing is set to true.
 -(UITableViewCellEditingStyle)tableView:(UITableView *)tableVieweditingStyleForRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -69,26 +57,22 @@
     {
         [listOfRestaurants removeObjectAtIndex:indexPath.row];
         [restaurantDisplay deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:(true)];
-        [locations updateRestaurantArray:listOfRestaurants];
-        NSArray *views = [self.tabBarController viewControllers];
-        mapController *mapView = (mapController*) [views objectAtIndex:1];
-        mapView.locations = locations;
-        mapView.listOfRestaurants = listOfRestaurants;
-        
+        [locations updateRestaurantArray:listOfRestaurants]; //update the main Array by removing the deleted item
+        [self setMapControllerProperties:locations listOfRestaurants:listOfRestaurants]; //update the mapController properties
     }
 }
 
-
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-     detailMapView *mapDetail = [[detailMapView alloc] initWithNibName:@"detailMapView" bundle:nil];
-     NSDictionary *locationsAndDetails = [locations getListOfDictionaries];
-     NSMutableArray *listOfLocations = [locations getRestaurantList];
-     NSDictionary *restaurantNames = [locations getRestaurantNames];
+     detailMapView *mapDetail = [[detailMapView alloc] initWithNibName:@"detailMapView" bundle:nil]; //initialize the detail view for the list
+     NSDictionary *locationsAndDetails = [locations getListOfDictionaries]; //get the object for the location details
+     NSMutableArray *listOfLocations = [locations getRestaurantList]; //get the current list of restaurants still available
+     NSDictionary *restaurantNames = [locations getRestaurantNames]; //get the list of restaurant names
      if (mapDetail != nil)
      {
-         [self presentViewController:mapDetail animated:TRUE completion:nil];
-         NSArray *locationKeys = [locationsAndDetails allKeys];
+         [self presentViewController:mapDetail animated:TRUE completion:nil]; //open the detail view
+         NSArray *locationKeys = [locationsAndDetails allKeys]; //create an array of the keys where the restaurant details are saved
+         //loop through the location keys and find a match to the current index, then fetch that data.
          for (int x = 0; x<[locationKeys count]; x++)
          {
              if ([locationKeys objectAtIndex:x] == [listOfLocations objectAtIndex:indexPath.row])
@@ -100,18 +84,20 @@
                  NSNumber *lonNumber = [thisLocation objectForKey:@"longitude"];
                  NSString *latString = [latNumber stringValue];
                  NSString *lonString = [lonNumber stringValue];
+                 //set the detail list properties
+                 mapDetail.restaurantName.text = thisRestaurantName;
                  mapDetail.locationName.text = thisObject;
                  mapDetail.locationLatitude.text = latString;;
                  mapDetail.locationLongitude.text = lonString;
                  float latFloat = [latNumber floatValue];
                  float lonFloat = [lonNumber floatValue];
-                 [mapDetail receiveNameLatLonValues:latFloat lon:lonFloat name:thisRestaurantName];
+                 [mapDetail receiveNameLatLonValues:latFloat lon:lonFloat name:thisRestaurantName]; //call the method in the detailmapview that sets the default span/centering for a unique item
             }
          }
      }
 }
 
-
+//make things happent when the edit button is clicked
 -(IBAction)editButtonClick:(id)sender
 {
     if (editButton.tag == 0) //if the editButton is in its default state, go into delete mode
@@ -132,4 +118,12 @@
     }
 }
 
+//This is a reusable function that updates the mapController properties on demand
+-(void)setMapControllerProperties:(restaurantLocations*)thisLocation listOfRestaurants:(NSMutableArray*)thisRestaurantList
+{
+    NSArray *views = [self.tabBarController viewControllers];
+    mapController *mapView = (mapController*) [views objectAtIndex:1];
+    mapView.locations = thisLocation;
+    mapView.listOfRestaurants = thisRestaurantList;
+}
 @end

@@ -15,6 +15,7 @@
     IBOutlet UIButton *backButton;
 }
 
+//allow the below properties to be passed between the tableview and the detailview
 @property (nonatomic, retain) IBOutlet UILabel *locationName;
 @property (nonatomic, retain) IBOutlet UILabel *locationLatitude;
 @property (nonatomic, retain) IBOutlet UILabel *locationLongitude;
@@ -23,6 +24,6 @@
 @property (nonatomic) MKCoordinateRegion mapRegion;
 
 -(IBAction)backButtonClick:(id)sender;
--(void)receiveNameLatLonValues:(float)lat lon:(float)lon name:(NSString*)name;
+-(void)receiveNameLatLonValues:(float)lat lon:(float)lon name:(NSString*)name; //sets the centerpoint and creates the mapnote for the individual location
 
 @end
