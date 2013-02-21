@@ -4,36 +4,6 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1930"/>
     </dependencies>
     <scenes>
-        <!--Table View Controller - Item-->
-        <scene sceneID="SyM-z8-yaU">
-            <objects>
-                <tableViewController id="GUw-MZ-8aq" customClass="tableViewController" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="R8N-Su-CA3">
-                        <rect key="frame" x="0.0" y="20" width="768" height="955"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="reuseIdentifier" id="hgB-wk-Ytw">
-                                <rect key="frame" x="0.0" y="22" width="768" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="768" height="43"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                </view>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="GUw-MZ-8aq" id="1b1-46-4AD"/>
-                            <outlet property="delegate" destination="GUw-MZ-8aq" id="d5n-Fo-hBz"/>
-                        </connections>
-                    </tableView>
-                    <tabBarItem key="tabBarItem" title="Item" id="FIt-Yg-oCo"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="FGT-Rp-E1z" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3041" y="122"/>
-        </scene>
         <!--Map Controller - Map-->
         <scene sceneID="13">
             <objects>
@@ -83,13 +53,78 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="GUw-MZ-8aq" kind="relationship" relationship="viewControllers" id="vvc-VG-nAB"/>
-                        <segue destination="3" kind="relationship" relationship="viewControllers" id="0k6-Zd-BES"/>
+                        <segue destination="sku-0G-tYX" kind="relationship" relationship="viewControllers" id="ilQ-Z3-C9Z"/>
+                        <segue destination="3" kind="relationship" relationship="viewControllers" id="ysC-C9-vV9"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="14" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2015" y="638"/>
+        </scene>
+        <!--Table View Controller - Restaurant List-->
+        <scene sceneID="XXM-5J-FiA">
+            <objects>
+                <viewController id="sku-0G-tYX" customClass="tableViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="49L-Y5-gnl">
+                        <rect key="frame" x="0.0" y="20" width="768" height="955"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Caruso Restaurants" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gK6-fN-uBN">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Please select a location from the list below." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YC8-QQ-A3y">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="a5P-tE-VXW"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="fVa-wC-oFQ">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="882" id="OEn-h3-BRG"/>
+                                </constraints>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" id="YvH-z9-pSz">
+                                        <rect key="frame" x="0.0" y="22" width="768" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="768" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="sku-0G-tYX" id="l8v-q8-aQ2"/>
+                                    <outlet property="delegate" destination="sku-0G-tYX" id="hbe-9G-7jM"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="YC8-QQ-A3y" firstAttribute="top" secondItem="gK6-fN-uBN" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="J40-52-Wz9"/>
+                            <constraint firstItem="fVa-wC-oFQ" firstAttribute="leading" secondItem="49L-Y5-gnl" secondAttribute="leading" type="default" id="LfK-dp-JCM"/>
+                            <constraint firstItem="fVa-wC-oFQ" firstAttribute="top" secondItem="YC8-QQ-A3y" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="Obw-04-vJQ"/>
+                            <constraint firstItem="fVa-wC-oFQ" firstAttribute="trailing" secondItem="49L-Y5-gnl" secondAttribute="trailing" type="default" id="OkS-U4-uV8"/>
+                            <constraint firstItem="gK6-fN-uBN" firstAttribute="leading" secondItem="49L-Y5-gnl" secondAttribute="leading" type="default" id="ay0-zV-ZXK"/>
+                            <constraint firstItem="YC8-QQ-A3y" firstAttribute="leading" secondItem="49L-Y5-gnl" secondAttribute="leading" type="default" id="cv6-t3-cby"/>
+                            <constraint firstItem="gK6-fN-uBN" firstAttribute="trailing" secondItem="49L-Y5-gnl" secondAttribute="trailing" type="default" id="fAt-x5-0jh"/>
+                            <constraint firstItem="fVa-wC-oFQ" firstAttribute="bottom" secondItem="49L-Y5-gnl" secondAttribute="bottom" type="default" id="nBe-cO-8jc"/>
+                            <constraint firstItem="YC8-QQ-A3y" firstAttribute="trailing" secondItem="49L-Y5-gnl" secondAttribute="trailing" type="default" id="yvz-sj-M7O"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Restaurant List" id="iYy-Dj-o3Q"/>
+                    <connections>
+                        <outlet property="restaurantDisplay" destination="fVa-wC-oFQ" id="4wI-kg-0O1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oJj-Bm-38i" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3046" y="119"/>
         </scene>
     </scenes>
     <resources>
@@ -105,8 +140,12 @@
                 <relationship kind="outlet" name="appMap" candidateClass="MKMapView"/>
             </relationships>
         </class>
-        <class className="tableViewController" superclassName="UITableViewController">
+        <class className="tableViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/tableViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="editButtonClick:"/>
+                <relationship kind="outlet" name="restaurantDisplay" candidateClass="UITableView"/>
+            </relationships>
         </class>
     </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

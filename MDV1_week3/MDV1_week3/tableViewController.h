@@ -7,7 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <MapKit/MapKit.h>
 
-@interface tableViewController : UITableViewController
+@interface tableViewController : UIViewController <UITableViewDelegate>
+{
+    IBOutlet UITableView *restaurantDisplay;
+}
+
+-(IBAction)editButtonClick:(id)sender;
 
 @end

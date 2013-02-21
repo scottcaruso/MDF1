@@ -26,6 +26,8 @@
 		30DFE72216D2F0720013D21B /* tableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30DFE72116D2F0720013D21B /* tableViewController.m */; };
 		30DFE72516D467C20013D21B /* restaurantLocations.m in Sources */ = {isa = PBXBuildFile; fileRef = 30DFE72416D467C20013D21B /* restaurantLocations.m */; };
 		30DFE73416D48D6F0013D21B /* mapNotes.m in Sources */ = {isa = PBXBuildFile; fileRef = 30DFE73316D48D6F0013D21B /* mapNotes.m */; };
+		30DFE73C16D5C0AF0013D21B /* detailMapView.m in Sources */ = {isa = PBXBuildFile; fileRef = 30DFE73A16D5C0AF0013D21B /* detailMapView.m */; };
+		30DFE73D16D5C0AF0013D21B /* detailMapView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 30DFE73B16D5C0AF0013D21B /* detailMapView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +58,9 @@
 		30DFE72416D467C20013D21B /* restaurantLocations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = restaurantLocations.m; sourceTree = "<group>"; };
 		30DFE73216D48D6F0013D21B /* mapNotes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mapNotes.h; sourceTree = "<group>"; };
 		30DFE73316D48D6F0013D21B /* mapNotes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mapNotes.m; sourceTree = "<group>"; };
+		30DFE73916D5C0AF0013D21B /* detailMapView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = detailMapView.h; sourceTree = "<group>"; };
+		30DFE73A16D5C0AF0013D21B /* detailMapView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = detailMapView.m; sourceTree = "<group>"; };
+		30DFE73B16D5C0AF0013D21B /* detailMapView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = detailMapView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +116,9 @@
 				30DFE71016D2CC4B0013D21B /* first@2x.png */,
 				30DFE72016D2F0720013D21B /* tableViewController.h */,
 				30DFE72116D2F0720013D21B /* tableViewController.m */,
+				30DFE73916D5C0AF0013D21B /* detailMapView.h */,
+				30DFE73A16D5C0AF0013D21B /* detailMapView.m */,
+				30DFE73B16D5C0AF0013D21B /* detailMapView.xib */,
 				30DFE71216D2CC4B0013D21B /* mapController.h */,
 				30DFE71316D2CC4B0013D21B /* mapController.m */,
 				30DFE71516D2CC4B0013D21B /* second.png */,
@@ -198,6 +206,7 @@
 				30DFE71116D2CC4B0013D21B /* first@2x.png in Resources */,
 				30DFE71616D2CC4B0013D21B /* second.png in Resources */,
 				30DFE71816D2CC4B0013D21B /* second@2x.png in Resources */,
+				30DFE73D16D5C0AF0013D21B /* detailMapView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -214,6 +223,7 @@
 				30DFE72216D2F0720013D21B /* tableViewController.m in Sources */,
 				30DFE72516D467C20013D21B /* restaurantLocations.m in Sources */,
 				30DFE73416D48D6F0013D21B /* mapNotes.m in Sources */,
+				30DFE73C16D5C0AF0013D21B /* detailMapView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

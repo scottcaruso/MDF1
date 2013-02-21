@@ -9,7 +9,6 @@
 #import "mapController.h"
 #import "mapNotes.h"
 #import "restaurantLocations.h"
-#import "tableViewController.h"
 
 @interface mapController ()
 
@@ -33,9 +32,11 @@
         thisLoc.latitude = lati;
         thisLoc.longitude = longi;
         NSString *mapTitle = [[NSString alloc] initWithString:[currentList objectAtIndex:x]];
+        NSDictionary *restaurantNames = [locations getRestaurantNames];
+        NSString *thisRestaurantName = [[NSString alloc] initWithString:[restaurantNames objectForKey:mapTitle]];
         if (mapTitle != nil)
         {
-            mapNotes *thisMapNote = [[mapNotes alloc] initWithTitle:mapTitle coord:thisLoc];
+            mapNotes *thisMapNote = [[mapNotes alloc] initWithTitle:thisRestaurantName coord:thisLoc];
             if (thisMapNote != nil)
             {
                 [appMap addAnnotation:thisMapNote];
@@ -52,11 +53,11 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void)mapViewDidFinishLoadingMap:(MKMapView *)mapView
+-(void)mapViewDidFinishLoadingMap:(MKMapView *)mapView
 {
     MKCoordinateSpan mapSpan;
-    mapSpan.latitudeDelta = 50.0f;
-    mapSpan.longitudeDelta = 50.0f;
+    mapSpan.latitudeDelta = 20.0f;
+    mapSpan.longitudeDelta = 20.0f;
     
     CLLocationCoordinate2D mapCenter;
     mapCenter.latitude = 39.82f;

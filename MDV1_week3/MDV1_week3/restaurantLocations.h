@@ -22,10 +22,12 @@
     NSDictionary *hartford;
     NSDictionary *boston;
     NSDictionary *listOfDictionaries;
+    NSDictionary *listOfRestaurantNames;
 }
 
 -(NSMutableArray*)getRestaurantList;
 -(NSDictionary*)getListOfDictionaries;
 -(NSDictionary*)getDictionaryForItem:(NSString*)arrayLocation;
+-(NSDictionary*)getRestaurantNames;
 
 @end

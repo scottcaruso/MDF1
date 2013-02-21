@@ -8,6 +8,7 @@
 
 #import "tableViewController.h"
 #import "restaurantLocations.h"
+#import "detailMapView.h"
 
 @interface tableViewController ()
 
@@ -15,55 +16,33 @@
 
 @implementation tableViewController
 
-- (id)initWithStyle:(UITableViewStyle)style
-{
-    self = [super initWithStyle:style];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
  
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
-#pragma mark - Table view data source
-
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
-{
-#warning Potentially incomplete method implementation.
-    // Return the number of sections.
-    return 0;
-}
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-#warning Incomplete method implementation.
-    // Return the number of rows in the section.
-    return 0;
+    restaurantLocations *locations = [[restaurantLocations alloc] init];
+    NSMutableArray *listOfLocations = [locations getRestaurantList];
+    return [listOfLocations count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *CellIdentifier = @"Cell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
-    
-    // Configure the cell...
-    
+    restaurantLocations *locations = [[restaurantLocations alloc] init];
+    NSMutableArray *listOfLocations = [locations getRestaurantList];
+    if (cell == nil)
+    {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+    }
+    cell.textLabel.text = [listOfLocations objectAtIndex:indexPath.row];
     return cell;
 }
 
@@ -90,33 +69,37 @@
 }
 */
 
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
-{
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
-#pragma mark - Table view delegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    // Navigation logic may go here. Create and push another view controller.
-    /*
-     <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
-     // ...
-     // Pass the selected object to the new view controller.
-     [self.navigationController pushViewController:detailViewController animated:YES];
-     */
+     detailMapView *mapDetail = [[detailMapView alloc] initWithNibName:@"detailMapView" bundle:nil];
+     restaurantLocations *locations = [[restaurantLocations alloc] init];
+     NSDictionary *locationsAndDetails = [locations getListOfDictionaries];
+     NSMutableArray *listOfLocations = [locations getRestaurantList];
+     NSDictionary *restaurantNames = [locations getRestaurantNames];
+     if (mapDetail != nil)
+     {
+         [self presentViewController:mapDetail animated:TRUE completion:nil];
+         NSArray *locationKeys = [locationsAndDetails allKeys];
+         for (int x = 0; x<[locationKeys count]; x++)
+         {
+             if ([locationKeys objectAtIndex:x] == [listOfLocations objectAtIndex:indexPath.row])
+             {
+                 NSString *thisObject = [[NSString alloc] initWithString:[locationKeys objectAtIndex:x]];
+                 NSString *thisRestaurantName = [[NSString alloc] initWithString:[restaurantNames objectForKey:thisObject]];
+                 NSDictionary *thisLocation = [locationsAndDetails valueForKey:thisObject];
+                 NSNumber *latNumber = [thisLocation objectForKey:@"latitude"];
+                 NSNumber *lonNumber = [thisLocation objectForKey:@"longitude"];
+                 NSString *latString = [latNumber stringValue];
+                 NSString *lonString = [lonNumber stringValue];
+                 mapDetail.locationName.text = thisObject;
+                 mapDetail.locationLatitude.text = latString;;
+                 mapDetail.locationLongitude.text = lonString;
+                 float latFloat = [latNumber floatValue];
+                 float lonFloat = [lonNumber floatValue];
+                 [mapDetail receiveNameLatLonValues:latFloat lon:lonFloat name:thisRestaurantName];
+            }
+         }
+     }
 }
-
 @end
