@@ -34,18 +34,21 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Map" image="second" id="6"/>
+                    <navigationItem key="navigationItem" id="pEM-wm-Mjw"/>
                     <connections>
                         <outlet property="appMap" destination="uOa-qf-iEN" id="mYR-nG-GUx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="12" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3041" y="1308"/>
+            <point key="canvasLocation" x="3046" y="1302"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="15">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="14" sceneMemberID="firstResponder"/>
                 <tabBarController id="4" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="lEC-is-gHr"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="5">
                         <rect key="frame" x="0.0" y="975" width="768" height="49"/>
@@ -54,12 +57,11 @@
                     </tabBar>
                     <connections>
                         <segue destination="sku-0G-tYX" kind="relationship" relationship="viewControllers" id="ilQ-Z3-C9Z"/>
-                        <segue destination="3" kind="relationship" relationship="viewControllers" id="ysC-C9-vV9"/>
+                        <segue destination="3" kind="relationship" relationship="viewControllers" id="XKT-CL-Yxg"/>
                     </connections>
                 </tabBarController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="14" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2015" y="638"/>
+            <point key="canvasLocation" x="2015" y="626"/>
         </scene>
         <!--Table View Controller - Restaurant List-->
         <scene sceneID="XXM-5J-FiA">
@@ -103,22 +105,39 @@
                                     <outlet property="delegate" destination="sku-0G-tYX" id="hbe-9G-7jM"/>
                                 </connections>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ghE-cP-K7d">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Edit List">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="editButtonClick:" destination="sku-0G-tYX" eventType="touchUpInside" id="GXK-x7-RZb"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="YC8-QQ-A3y" firstAttribute="top" secondItem="gK6-fN-uBN" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="J40-52-Wz9"/>
+                            <constraint firstItem="ghE-cP-K7d" firstAttribute="top" secondItem="gK6-fN-uBN" secondAttribute="top" type="default" id="Kjm-Tg-sCO"/>
                             <constraint firstItem="fVa-wC-oFQ" firstAttribute="leading" secondItem="49L-Y5-gnl" secondAttribute="leading" type="default" id="LfK-dp-JCM"/>
                             <constraint firstItem="fVa-wC-oFQ" firstAttribute="top" secondItem="YC8-QQ-A3y" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="Obw-04-vJQ"/>
                             <constraint firstItem="fVa-wC-oFQ" firstAttribute="trailing" secondItem="49L-Y5-gnl" secondAttribute="trailing" type="default" id="OkS-U4-uV8"/>
                             <constraint firstItem="gK6-fN-uBN" firstAttribute="leading" secondItem="49L-Y5-gnl" secondAttribute="leading" type="default" id="ay0-zV-ZXK"/>
                             <constraint firstItem="YC8-QQ-A3y" firstAttribute="leading" secondItem="49L-Y5-gnl" secondAttribute="leading" type="default" id="cv6-t3-cby"/>
                             <constraint firstItem="gK6-fN-uBN" firstAttribute="trailing" secondItem="49L-Y5-gnl" secondAttribute="trailing" type="default" id="fAt-x5-0jh"/>
+                            <constraint firstAttribute="trailing" secondItem="ghE-cP-K7d" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="i8A-lZ-P3K"/>
                             <constraint firstItem="fVa-wC-oFQ" firstAttribute="bottom" secondItem="49L-Y5-gnl" secondAttribute="bottom" type="default" id="nBe-cO-8jc"/>
                             <constraint firstItem="YC8-QQ-A3y" firstAttribute="trailing" secondItem="49L-Y5-gnl" secondAttribute="trailing" type="default" id="yvz-sj-M7O"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Restaurant List" id="iYy-Dj-o3Q"/>
+                    <navigationItem key="navigationItem" id="Lfs-Yx-xgG"/>
                     <connections>
+                        <outlet property="editButton" destination="ghE-cP-K7d" id="jXN-rF-raS"/>
                         <outlet property="restaurantDisplay" destination="fVa-wC-oFQ" id="4wI-kg-0O1"/>
                     </connections>
                 </viewController>
@@ -144,6 +163,7 @@
             <source key="sourceIdentifier" type="project" relativePath="./Classes/tableViewController.h"/>
             <relationships>
                 <relationship kind="action" name="editButtonClick:"/>
+                <relationship kind="outlet" name="editButton" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="restaurantDisplay" candidateClass="UITableView"/>
             </relationships>
         </class>

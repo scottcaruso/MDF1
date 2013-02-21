@@ -8,10 +8,15 @@
 
 #import <UIKit/UIKit.h>
 #import <MapKit/MapKit.h>
+#import "restaurantLocations.h"
+#import "tableViewController.h"
 
 @interface mapController : UIViewController <MKMapViewDelegate>
 {
     IBOutlet MKMapView *appMap;
 }
+
+@property restaurantLocations *locations;
+@property NSMutableArray *listOfRestaurants;
 
 @end

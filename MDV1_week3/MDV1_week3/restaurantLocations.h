@@ -10,7 +10,6 @@
 
 @interface restaurantLocations : NSObject
 {
-    NSMutableArray *listOfRestaurants;
     NSDictionary *miami;
     NSDictionary *orlando;
     NSDictionary *dallas;
@@ -21,6 +20,7 @@
     NSDictionary *scranton;
     NSDictionary *hartford;
     NSDictionary *boston;
+    NSMutableArray *listOfRestaurants;
     NSDictionary *listOfDictionaries;
     NSDictionary *listOfRestaurantNames;
 }
@@ -29,5 +29,6 @@
 -(NSDictionary*)getListOfDictionaries;
 -(NSDictionary*)getDictionaryForItem:(NSString*)arrayLocation;
 -(NSDictionary*)getRestaurantNames;
+-(void)updateRestaurantArray:(NSMutableArray*)restaurants;
 
 @end

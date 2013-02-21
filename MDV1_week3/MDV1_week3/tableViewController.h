@@ -8,11 +8,17 @@
 
 #import <UIKit/UIKit.h>
 #import <MapKit/MapKit.h>
+#import "restaurantLocations.h"
+#import "mapController.h"
 
 @interface tableViewController : UIViewController <UITableViewDelegate>
 {
     IBOutlet UITableView *restaurantDisplay;
+    IBOutlet UIButton *editButton;
 }
+
+@property (readwrite, nonatomic) NSMutableArray *listOfRestaurants;
+@property (nonatomic) restaurantLocations *locations;
 
 -(IBAction)editButtonClick:(id)sender;
 

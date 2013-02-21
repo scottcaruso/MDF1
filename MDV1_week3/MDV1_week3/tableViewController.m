@@ -9,40 +9,41 @@
 #import "tableViewController.h"
 #import "restaurantLocations.h"
 #import "detailMapView.h"
+#import "mapController.h"
 
 @interface tableViewController ()
 
 @end
 
 @implementation tableViewController
+@synthesize locations;
+@synthesize listOfRestaurants;
 
 - (void)viewDidLoad
 {
+    locations = [[restaurantLocations alloc] init];
+    listOfRestaurants = [locations getRestaurantList];
+    NSArray *views = [self.tabBarController viewControllers];
+    mapController *mapView = (mapController*) [views objectAtIndex:1];
+    mapView.locations = locations;
+    mapView.listOfRestaurants = listOfRestaurants;
     [super viewDidLoad];
- 
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
-
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    restaurantLocations *locations = [[restaurantLocations alloc] init];
-    NSMutableArray *listOfLocations = [locations getRestaurantList];
-    return [listOfLocations count];
+    return [listOfRestaurants count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *CellIdentifier = @"Cell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
-    restaurantLocations *locations = [[restaurantLocations alloc] init];
-    NSMutableArray *listOfLocations = [locations getRestaurantList];
     if (cell == nil)
     {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
-    cell.textLabel.text = [listOfLocations objectAtIndex:indexPath.row];
+    cell.textLabel.text = [listOfRestaurants objectAtIndex:indexPath.row];
     return cell;
 }
 
@@ -55,25 +56,32 @@
 }
 */
 
-/*
-// Override to support editing the table view.
+//The function to set the editing style to delete mode when editing is set to true.
+-(UITableViewCellEditingStyle)tableView:(UITableView *)tableVieweditingStyleForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return UITableViewCellEditingStyleDelete;
+}
+
+//Delete an item when the button is pressed
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    }   
-    else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
+    if (editingStyle == UITableViewCellEditingStyleDelete)
+    {
+        [listOfRestaurants removeObjectAtIndex:indexPath.row];
+        [restaurantDisplay deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:(true)];
+        [locations updateRestaurantArray:listOfRestaurants];
+        NSArray *views = [self.tabBarController viewControllers];
+        mapController *mapView = (mapController*) [views objectAtIndex:1];
+        mapView.locations = locations;
+        mapView.listOfRestaurants = listOfRestaurants;
+        
+    }
 }
-*/
 
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
      detailMapView *mapDetail = [[detailMapView alloc] initWithNibName:@"detailMapView" bundle:nil];
-     restaurantLocations *locations = [[restaurantLocations alloc] init];
      NSDictionary *locationsAndDetails = [locations getListOfDictionaries];
      NSMutableArray *listOfLocations = [locations getRestaurantList];
      NSDictionary *restaurantNames = [locations getRestaurantNames];
@@ -102,4 +110,26 @@
          }
      }
 }
+
+
+-(IBAction)editButtonClick:(id)sender
+{
+    if (editButton.tag == 0) //if the editButton is in its default state, go into delete mode
+    {
+        [restaurantDisplay setEditing:TRUE];
+        [editButton setTitle:@"Normal Mode" forState:0];
+        [editButton setTitle:@"Normal Mode" forState:1];
+        [editButton setTitle:@"Normal Mode" forState:2];
+        editButton.tag = 1; //set the tag to non-default
+    }
+    else // if the button is non-default, go into normal mode
+    {
+        [restaurantDisplay setEditing:FALSE];
+        [editButton setTitle:@"Edit List" forState:0];
+        [editButton setTitle:@"Edit List" forState:1];
+        [editButton setTitle:@"Edit List" forState:2];
+        editButton.tag = 0; //set tag back to default
+    }
+}
+
 @end

@@ -9,21 +9,23 @@
 #import "mapController.h"
 #import "mapNotes.h"
 #import "restaurantLocations.h"
+#import "tableViewController.h"
 
 @interface mapController ()
 
 @end
 
 @implementation mapController
+@synthesize listOfRestaurants;
+@synthesize locations;
 
-- (void)viewDidLoad
+-(void)viewWillAppear:(BOOL)animated
 {
-    restaurantLocations *locations = [[restaurantLocations alloc] init];
-    NSMutableArray *currentList = [locations getRestaurantList];
-    int numberOfItems = [currentList count];
+    [appMap removeAnnotations:appMap.annotations];
+    int numberOfItems = [listOfRestaurants count];
     for (int x = 0; x < numberOfItems; x++)
     {
-        NSDictionary *thisDictionary = [locations getDictionaryForItem:[currentList objectAtIndex:x]];
+        NSDictionary *thisDictionary = [locations getDictionaryForItem:[listOfRestaurants objectAtIndex:x]];
         NSNumber *lat = [thisDictionary objectForKey:@"latitude"];
         NSNumber *lon = [thisDictionary objectForKey:@"longitude"];
         int lati = [lat integerValue];
@@ -31,7 +33,7 @@
         CLLocationCoordinate2D thisLoc;
         thisLoc.latitude = lati;
         thisLoc.longitude = longi;
-        NSString *mapTitle = [[NSString alloc] initWithString:[currentList objectAtIndex:x]];
+        NSString *mapTitle = [[NSString alloc] initWithString:[listOfRestaurants objectAtIndex:x]];
         NSDictionary *restaurantNames = [locations getRestaurantNames];
         NSString *thisRestaurantName = [[NSString alloc] initWithString:[restaurantNames objectForKey:mapTitle]];
         if (mapTitle != nil)
@@ -43,6 +45,11 @@
             }
         }
     }
+    [super viewWillAppear:FALSE];
+}
+
+- (void)viewDidLoad
+{
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
 }

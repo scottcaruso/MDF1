@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "restaurantLocations.h"
 
 @implementation AppDelegate
 
