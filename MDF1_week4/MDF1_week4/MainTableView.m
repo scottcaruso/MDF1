@@ -25,6 +25,15 @@
 
 - (void)viewDidLoad
 {
+    url = [[NSURL alloc] initWithString:@"http://www.govtrack.us/api/v1/person/?roles__role_type=president&format=xml"];
+    getPresidentList = [[NSURLRequest alloc] initWithURL:url];
+    if (getPresidentList != nil)
+    {
+        connection = [[NSURLConnection alloc] initWithRequest:getPresidentList delegate:self];
+        
+        presidentData = [NSMutableData data];
+    }
+    
     [super viewDidLoad];
 
     // Uncomment the following line to preserve selection between presentations.
@@ -116,6 +125,25 @@
      // Pass the selected object to the new view controller.
      [self.navigationController pushViewController:detailViewController animated:YES];
      */
+}
+
+//Do stuff when the data is received.
+-(void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data
+{
+    if (data != nil)
+    {
+        [presidentData appendData:data];
+    }
+}
+
+-(void)connectionDidFinishLoading:(NSURLConnection *)connection
+{
+    NSString *requestString = [[NSString alloc] initWithData:presidentData encoding:NSASCIIStringEncoding];
+    
+    if (requestString != nil)
+    {
+        NSLog(@"%@",requestString);
+    }
 }
 
 @end

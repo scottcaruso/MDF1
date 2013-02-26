@@ -9,5 +9,12 @@
 #import <UIKit/UIKit.h>
 
 @interface MainTableView : UITableViewController
+{
+    NSURLRequest *getPresidentList;
+    NSURL *url;
+    NSURLConnection *connection;
+    
+    NSMutableData *presidentData;
+}
 
 @end
