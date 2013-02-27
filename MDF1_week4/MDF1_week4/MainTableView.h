@@ -8,13 +8,24 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MainTableView : UITableViewController
+@interface MainTableView : UITableViewController <UITableViewDelegate,NSXMLParserDelegate>
 {
     NSURLRequest *getPresidentList;
     NSURL *url;
     NSURLConnection *connection;
     
-    NSMutableData *presidentData;
+    NSMutableData *presidentDataObject;
+    IBOutlet UITableView *presidentTable;
+    
+    NSString *currentElement;
+    
+    NSMutableString *presidentFirstName;
+    NSMutableString *presidentLastName;
 }
+
+@property (nonatomic) int numberOfObjects;
+@property (nonatomic) int rows;
+@property (nonatomic) NSMutableArray *presidentNames;
+@property (nonatomic) BOOL alreadyDone;
 
 @end

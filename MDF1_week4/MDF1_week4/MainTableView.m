@@ -13,6 +13,7 @@
 @end
 
 @implementation MainTableView
+@synthesize rows, numberOfObjects, presidentNames, alreadyDone;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -23,16 +24,24 @@
     return self;
 }
 
-- (void)viewDidLoad
+-(void)viewWillAppear:(BOOL)animated
 {
-    url = [[NSURL alloc] initWithString:@"http://www.govtrack.us/api/v1/person/?roles__role_type=president&format=xml"];
+    presidentNames = [[NSMutableArray alloc] initWithObjects:nil];
+    presidentFirstName = [[NSMutableString alloc] initWithFormat:@""];
+    presidentLastName = [[NSMutableString alloc] initWithFormat:@""];
+    url = [[NSURL alloc] initWithString:@"http://www.govtrack.us/api/v1/person/?roles__role_type=president&format=xml&limit=50"];
     getPresidentList = [[NSURLRequest alloc] initWithURL:url];
     if (getPresidentList != nil)
     {
         connection = [[NSURLConnection alloc] initWithRequest:getPresidentList delegate:self];
-        
-        presidentData = [NSMutableData data];
+        presidentDataObject = [NSMutableData data];
+        [self connection:connection didReceiveData:presidentDataObject];
+        [self connectionDidFinishLoading:connection];
     }
+}
+
+- (void)viewDidLoad
+{
     
     [super viewDidLoad];
 
@@ -53,25 +62,24 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-#warning Potentially incomplete method implementation.
-    // Return the number of sections.
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-#warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return 0;
+    return [presidentNames count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *CellIdentifier = @"Cell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
-    
-    // Configure the cell...
-    
+    if (cell == nil)
+    {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+    }
+    cell.textLabel.text = [presidentNames objectAtIndex:indexPath.row];
     return cell;
 }
 
@@ -127,22 +135,65 @@
      */
 }
 
-//Do stuff when the data is received.
 -(void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data
 {
     if (data != nil)
     {
-        [presidentData appendData:data];
+        [presidentDataObject appendData:data];
     }
 }
 
 -(void)connectionDidFinishLoading:(NSURLConnection *)connection
 {
-    NSString *requestString = [[NSString alloc] initWithData:presidentData encoding:NSASCIIStringEncoding];
-    
-    if (requestString != nil)
+    NSXMLParser *parser = [[NSXMLParser alloc] initWithData:presidentDataObject];
+    if (parser != nil)
     {
-        NSLog(@"%@",requestString);
+        [parser setDelegate:self];
+        [parser parse];
+    }
+    
+    NSMutableArray *copyOfPresidentsArray = [presidentNames copy];
+    NSInteger index = [copyOfPresidentsArray count] - 1;
+    for (id object in [copyOfPresidentsArray reverseObjectEnumerator]) {
+        if ([presidentNames indexOfObject:object inRange:NSMakeRange(0, index)] != NSNotFound) {
+            [presidentNames removeObjectAtIndex:index];
+        }
+        index--;
+    }
+    [presidentNames sortUsingSelector:@selector(localizedCaseInsensitiveCompare:)];
+    [presidentTable reloadData];
+}
+
+-(void)parser:(NSXMLParser *)parser didStartElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qName attributes:(NSDictionary *)attributeDict
+{
+    currentElement = [[NSString alloc] initWithString:elementName];
+    NSString *objectsName = [[NSString alloc] initWithFormat:@"object"];
+    if ([currentElement isEqualToString:objectsName])
+    {
+        numberOfObjects++;
+    }
+}
+
+- (void)parser:(NSXMLParser *)parser foundCharacters:(NSString *)string
+{
+    self.alreadyDone = FALSE;
+    NSString *firstNameID = [[NSString alloc] initWithFormat:@"firstname"];
+    NSString *lastNameID = [[NSString alloc] initWithFormat:@"lastname"];
+    NSString *whenToCompileString = [[NSString alloc] initWithFormat:@"bioguideid"];
+    if ([currentElement isEqualToString:firstNameID])
+    {
+        [presidentFirstName setString:string];
+    }
+    if ([currentElement isEqualToString:lastNameID])
+    {
+        [presidentLastName setString:string];
+        NSLog(@"%@",presidentLastName);
+    }
+    if ([currentElement isEqualToString:whenToCompileString])
+    {
+        NSMutableString *presidentName = [[NSMutableString alloc] initWithString:presidentFirstName];
+        [presidentName appendFormat:@" %@",presidentLastName];
+        [presidentNames addObject:presidentName];
     }
 }
 
