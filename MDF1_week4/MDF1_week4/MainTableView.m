@@ -7,6 +7,7 @@
 //
 
 #import "MainTableView.h"
+#import "PresidentDetails.h"
 
 @interface MainTableView ()
 
@@ -124,17 +125,13 @@
 }
 */
 
-#pragma mark - Table view delegate
-
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    // Navigation logic may go here. Create and push another view controller.
-    /*
-     <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
-     // ...
-     // Pass the selected object to the new view controller.
-     [self.navigationController pushViewController:detailViewController animated:YES];
-     */
+    PresidentDetails *detailView = [[PresidentDetails alloc] initWithNibName:@"PresidentDetails" bundle:nil];
+    if (detailView != nil)
+    {
+        [self presentViewController:detailView animated:TRUE completion:nil];
+    }
 }
 
 //add the retrieved data to the main data object

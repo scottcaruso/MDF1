@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		301F351F16DE79CF00388588 /* PresidentDetails.xib in Resources */ = {isa = PBXBuildFile; fileRef = 301F351E16DE79CF00388588 /* PresidentDetails.xib */; };
 		3038931316DC573D0024EFA7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3038931216DC573D0024EFA7 /* UIKit.framework */; };
 		3038931516DC573D0024EFA7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3038931416DC573D0024EFA7 /* Foundation.framework */; };
 		3038931716DC573D0024EFA7 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3038931616DC573D0024EFA7 /* CoreGraphics.framework */; };
@@ -23,9 +24,11 @@
 		3038933816DC573D0024EFA7 /* second.png in Resources */ = {isa = PBXBuildFile; fileRef = 3038933716DC573D0024EFA7 /* second.png */; };
 		3038933A16DC573D0024EFA7 /* second@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3038933916DC573D0024EFA7 /* second@2x.png */; };
 		3038934216DC58850024EFA7 /* MainTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3038934116DC58850024EFA7 /* MainTableView.m */; };
+		3038935316DE74C60024EFA7 /* PresidentDetails.m in Sources */ = {isa = PBXBuildFile; fileRef = 3038935216DE74C60024EFA7 /* PresidentDetails.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		301F351E16DE79CF00388588 /* PresidentDetails.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PresidentDetails.xib; sourceTree = "<group>"; };
 		3038930E16DC573D0024EFA7 /* MDF1_week4.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MDF1_week4.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3038931216DC573D0024EFA7 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		3038931416DC573D0024EFA7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -48,6 +51,8 @@
 		3038933916DC573D0024EFA7 /* second@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "second@2x.png"; sourceTree = "<group>"; };
 		3038934016DC58850024EFA7 /* MainTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainTableView.h; sourceTree = "<group>"; };
 		3038934116DC58850024EFA7 /* MainTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainTableView.m; sourceTree = "<group>"; };
+		3038935116DE74C60024EFA7 /* PresidentDetails.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PresidentDetails.h; sourceTree = "<group>"; };
+		3038935216DE74C60024EFA7 /* PresidentDetails.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PresidentDetails.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +104,9 @@
 				3038932A16DC573D0024EFA7 /* MainStoryboard.storyboard */,
 				3038934016DC58850024EFA7 /* MainTableView.h */,
 				3038934116DC58850024EFA7 /* MainTableView.m */,
+				3038935116DE74C60024EFA7 /* PresidentDetails.h */,
+				3038935216DE74C60024EFA7 /* PresidentDetails.m */,
+				301F351E16DE79CF00388588 /* PresidentDetails.xib */,
 				3038933016DC573D0024EFA7 /* first.png */,
 				3038933216DC573D0024EFA7 /* first@2x.png */,
 				3038933416DC573D0024EFA7 /* SecondViewController.h */,
@@ -184,6 +192,7 @@
 				3038933316DC573D0024EFA7 /* first@2x.png in Resources */,
 				3038933816DC573D0024EFA7 /* second.png in Resources */,
 				3038933A16DC573D0024EFA7 /* second@2x.png in Resources */,
+				301F351F16DE79CF00388588 /* PresidentDetails.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -198,6 +207,7 @@
 				3038932316DC573D0024EFA7 /* AppDelegate.m in Sources */,
 				3038933616DC573D0024EFA7 /* SecondViewController.m in Sources */,
 				3038934216DC58850024EFA7 /* MainTableView.m in Sources */,
+				3038935316DE74C60024EFA7 /* PresidentDetails.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -316,6 +326,7 @@
 				3038933F16DC573D0024EFA7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
