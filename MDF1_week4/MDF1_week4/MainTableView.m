@@ -13,7 +13,7 @@
 @end
 
 @implementation MainTableView
-@synthesize rows, numberOfObjects, presidentNames, alreadyDone;
+@synthesize presidentNames;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -26,9 +26,12 @@
 
 -(void)viewWillAppear:(BOOL)animated
 {
+    //initialize the arrays and strings that will make up 
     presidentNames = [[NSMutableArray alloc] initWithObjects:nil];
     presidentFirstName = [[NSMutableString alloc] initWithFormat:@""];
     presidentLastName = [[NSMutableString alloc] initWithFormat:@""];
+    
+    //fetch the govtrack xml data
     url = [[NSURL alloc] initWithString:@"http://www.govtrack.us/api/v1/person/?roles__role_type=president&format=xml&limit=50"];
     getPresidentList = [[NSURLRequest alloc] initWithURL:url];
     if (getPresidentList != nil)
@@ -67,7 +70,6 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    // Return the number of rows in the section.
     return [presidentNames count];
 }
 
@@ -79,7 +81,7 @@
     {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
-    cell.textLabel.text = [presidentNames objectAtIndex:indexPath.row];
+    cell.textLabel.text = [presidentNames objectAtIndex:indexPath.row]; //pull a President name from the array
     return cell;
 }
 
@@ -135,6 +137,7 @@
      */
 }
 
+//add the retrieved data to the main data object
 -(void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data
 {
     if (data != nil)
@@ -152,14 +155,19 @@
         [parser parse];
     }
     
+    //the below makes a copy of the Presidents Array and then loops through both to remove duplicate entries.
     NSMutableArray *copyOfPresidentsArray = [presidentNames copy];
     NSInteger index = [copyOfPresidentsArray count] - 1;
-    for (id object in [copyOfPresidentsArray reverseObjectEnumerator]) {
-        if ([presidentNames indexOfObject:object inRange:NSMakeRange(0, index)] != NSNotFound) {
+    for (id object in [copyOfPresidentsArray reverseObjectEnumerator])
+    {
+        if ([presidentNames indexOfObject:object inRange:NSMakeRange(0, index)] != NSNotFound)
+        {
             [presidentNames removeObjectAtIndex:index];
         }
         index--;
     }
+    
+    //Alphabetize the array and then reload the tableview so that it takes in the data
     [presidentNames sortUsingSelector:@selector(localizedCaseInsensitiveCompare:)];
     [presidentTable reloadData];
 }
@@ -167,16 +175,10 @@
 -(void)parser:(NSXMLParser *)parser didStartElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qName attributes:(NSDictionary *)attributeDict
 {
     currentElement = [[NSString alloc] initWithString:elementName];
-    NSString *objectsName = [[NSString alloc] initWithFormat:@"object"];
-    if ([currentElement isEqualToString:objectsName])
-    {
-        numberOfObjects++;
-    }
 }
 
 - (void)parser:(NSXMLParser *)parser foundCharacters:(NSString *)string
 {
-    self.alreadyDone = FALSE;
     NSString *firstNameID = [[NSString alloc] initWithFormat:@"firstname"];
     NSString *lastNameID = [[NSString alloc] initWithFormat:@"lastname"];
     NSString *whenToCompileString = [[NSString alloc] initWithFormat:@"bioguideid"];
@@ -187,7 +189,6 @@
     if ([currentElement isEqualToString:lastNameID])
     {
         [presidentLastName setString:string];
-        NSLog(@"%@",presidentLastName);
     }
     if ([currentElement isEqualToString:whenToCompileString])
     {

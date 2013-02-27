@@ -10,22 +10,20 @@
 
 @interface MainTableView : UITableViewController <UITableViewDelegate,NSXMLParserDelegate>
 {
+    //pointers to grab the XML
     NSURLRequest *getPresidentList;
     NSURL *url;
     NSURLConnection *connection;
-    
     NSMutableData *presidentDataObject;
+    
     IBOutlet UITableView *presidentTable;
     
-    NSString *currentElement;
+    NSString *currentElement; //used by the parser to figure out where we are in the XML
     
-    NSMutableString *presidentFirstName;
-    NSMutableString *presidentLastName;
+    NSMutableString *presidentFirstName; //used by the parser to create a string for the table
+    NSMutableString *presidentLastName; //used by the parser to create a string for the table
 }
 
-@property (nonatomic) int numberOfObjects;
-@property (nonatomic) int rows;
-@property (nonatomic) NSMutableArray *presidentNames;
-@property (nonatomic) BOOL alreadyDone;
+@property (nonatomic) NSMutableArray *presidentNames; //create an array of the President names to pass around.
 
 @end
