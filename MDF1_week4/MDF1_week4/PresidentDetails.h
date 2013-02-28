@@ -10,10 +10,12 @@
 
 @interface PresidentDetails : UIViewController <NSXMLParserDelegate>
 {
+    //Outlets for the various objects on the page
     IBOutlet UIImageView *presidentPicture;
     IBOutlet UITextView *presidentDetails;
     IBOutlet UILabel *presidentName;
     
+    //Pointers to control the URL/XML request to pull down Presidential details
     NSURLRequest *getPresidentDetail;
     NSURL *url;
     NSURLConnection *connection;

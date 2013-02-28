@@ -50,6 +50,10 @@
 		301F357216DF2ACE00388588 /* Woodrow Wilson.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 301F354916DF2ACE00388588 /* Woodrow Wilson.jpg */; };
 		301F357316DF2ACE00388588 /* Zachary Taylor.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 301F354A16DF2ACE00388588 /* Zachary Taylor.jpg */; };
 		301F357516DF32BC00388588 /* homeicon.png in Resources */ = {isa = PBXBuildFile; fileRef = 301F357416DF32BC00388588 /* homeicon.png */; };
+		301F357716DF36DB00388588 /* appicon_default.png in Resources */ = {isa = PBXBuildFile; fileRef = 301F357616DF36DB00388588 /* appicon_default.png */; };
+		301F357916DF36DE00388588 /* appicon_retina.png in Resources */ = {isa = PBXBuildFile; fileRef = 301F357816DF36DE00388588 /* appicon_retina.png */; };
+		301F357B16DF36E300388588 /* Default-Portrait~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 301F357A16DF36E300388588 /* Default-Portrait~ipad.png */; };
+		301F357D16DF36E800388588 /* Default-Portrait@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 301F357C16DF36E800388588 /* Default-Portrait@2x~ipad.png */; };
 		3038931316DC573D0024EFA7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3038931216DC573D0024EFA7 /* UIKit.framework */; };
 		3038931516DC573D0024EFA7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3038931416DC573D0024EFA7 /* Foundation.framework */; };
 		3038931716DC573D0024EFA7 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3038931616DC573D0024EFA7 /* CoreGraphics.framework */; };
@@ -111,6 +115,10 @@
 		301F354916DF2ACE00388588 /* Woodrow Wilson.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Woodrow Wilson.jpg"; sourceTree = "<group>"; };
 		301F354A16DF2ACE00388588 /* Zachary Taylor.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Zachary Taylor.jpg"; sourceTree = "<group>"; };
 		301F357416DF32BC00388588 /* homeicon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = homeicon.png; sourceTree = "<group>"; };
+		301F357616DF36DB00388588 /* appicon_default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = appicon_default.png; sourceTree = "<group>"; };
+		301F357816DF36DE00388588 /* appicon_retina.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = appicon_retina.png; sourceTree = "<group>"; };
+		301F357A16DF36E300388588 /* Default-Portrait~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Portrait~ipad.png"; sourceTree = "<group>"; };
+		301F357C16DF36E800388588 /* Default-Portrait@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Portrait@2x~ipad.png"; sourceTree = "<group>"; };
 		3038930E16DC573D0024EFA7 /* MDF1_week4.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MDF1_week4.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3038931216DC573D0024EFA7 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		3038931416DC573D0024EFA7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -200,6 +208,10 @@
 		3038930316DC573D0024EFA7 = {
 			isa = PBXGroup;
 			children = (
+				301F357C16DF36E800388588 /* Default-Portrait@2x~ipad.png */,
+				301F357A16DF36E300388588 /* Default-Portrait~ipad.png */,
+				301F357816DF36DE00388588 /* appicon_retina.png */,
+				301F357616DF36DB00388588 /* appicon_default.png */,
 				3038931816DC573D0024EFA7 /* MDF1_week4 */,
 				3038931116DC573D0024EFA7 /* Frameworks */,
 				3038930F16DC573D0024EFA7 /* Products */,
@@ -361,6 +373,10 @@
 				301F357216DF2ACE00388588 /* Woodrow Wilson.jpg in Resources */,
 				301F357316DF2ACE00388588 /* Zachary Taylor.jpg in Resources */,
 				301F357516DF32BC00388588 /* homeicon.png in Resources */,
+				301F357716DF36DB00388588 /* appicon_default.png in Resources */,
+				301F357916DF36DE00388588 /* appicon_retina.png in Resources */,
+				301F357B16DF36E300388588 /* Default-Portrait~ipad.png in Resources */,
+				301F357D16DF36E800388588 /* Default-Portrait@2x~ipad.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

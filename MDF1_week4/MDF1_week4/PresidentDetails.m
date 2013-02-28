@@ -27,9 +27,8 @@
 - (void)viewDidLoad
 {
     //fetch the govtrack xml data
-    NSString *fetchString = [[NSString alloc] initWithFormat:@"http://www.govtrack.us%@?format=xml",presidentDetailURL];
+    NSString *fetchString = [[NSString alloc] initWithFormat:@"http://www.govtrack.us%@?format=xml",presidentDetailURL]; //construct a string based on the specific detail URL passed into this object
     url = [[NSURL alloc] initWithString:fetchString];
-    NSLog(@"%@",url);
     getPresidentDetail = [[NSURLRequest alloc] initWithURL:url];
     if (getPresidentDetail != nil)
     {
@@ -39,6 +38,7 @@
         [self connectionDidFinishLoading:connection];  
     }
     presidentName.text = nameOfPresident;
+    //George Washington's picture is a png. Everyone else's is a jpg. This sets a special string for George Washington.
     if ([nameOfPresident isEqualToString:@"George Washington"])
     {
         NSString *imageString = [[NSString alloc] initWithFormat:@"%@.png",nameOfPresident];

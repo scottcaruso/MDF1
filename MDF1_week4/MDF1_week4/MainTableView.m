@@ -93,6 +93,7 @@
     PresidentDetails *detailView = [[PresidentDetails alloc] initWithNibName:@"PresidentDetails" bundle:nil];
     if (detailView != nil)
     {
+        //access the Presidents dictionary to acquire the necessary string to pull President details ont he following view.
         NSArray *presidentKey = [dictionaryOfPresidents allKeysForObject:[presidentNames objectAtIndex:indexPath.row]];
         NSString *thisURL = [presidentKey objectAtIndex:0];
         detailView.presidentDetailURL = thisURL;
@@ -158,14 +159,14 @@
     }
     if ([currentElement isEqualToString:resourceID])
     {
-        NSString *whichString = [string substringToIndex:13];
-        [linkToRecord setString:string];
+        NSString *whichString = [string substringToIndex:13]; //this creates a substring to verify that we have found the correct one of the two resourceIDs
+        [linkToRecord setString:string]; //sets linkToRecord to this object
         if ([whichString isEqualToString:@"/api/v1/perso"])
         {
             NSMutableString *presidentName = [[NSMutableString alloc] initWithString:presidentFirstName];
             [presidentName appendFormat:@" %@",presidentLastName];
             [presidentNames addObject:presidentName];
-            [dictionaryOfPresidents setObject:presidentName forKey:linkToRecord];
+            [dictionaryOfPresidents setObject:presidentName forKey:linkToRecord]; //add a new key/value to the President dictionary for later
         }
     }
 }
