@@ -9,5 +9,12 @@
 #import <UIKit/UIKit.h>
 
 @interface SecondViewController : UIViewController
+{
+    IBOutlet UITextView *mainTextView;
+    NSURLRequest *getPresidentList;
+    NSURL *url;
+    NSURLConnection *connection;
+    NSMutableData *presidentDataObject;
+}
 
 @end

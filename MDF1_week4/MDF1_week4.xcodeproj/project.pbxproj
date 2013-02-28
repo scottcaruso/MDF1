@@ -8,6 +8,48 @@
 
 /* Begin PBXBuildFile section */
 		301F351F16DE79CF00388588 /* PresidentDetails.xib in Resources */ = {isa = PBXBuildFile; fileRef = 301F351E16DE79CF00388588 /* PresidentDetails.xib */; };
+		301F354B16DF2ACE00388588 /* Abraham Lincoln.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 301F352216DF2ACE00388588 /* Abraham Lincoln.jpg */; };
+		301F354C16DF2ACE00388588 /* Andrew Jackson.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 301F352316DF2ACE00388588 /* Andrew Jackson.jpg */; };
+		301F354D16DF2ACE00388588 /* Andrew Johnson.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 301F352416DF2ACE00388588 /* Andrew Johnson.jpg */; };
+		301F354E16DF2ACE00388588 /* Barack Obama.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 301F352516DF2ACE00388588 /* Barack Obama.jpg */; };
+		301F354F16DF2ACE00388588 /* Benjamin Harrison.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 301F352616DF2ACE00388588 /* Benjamin Harrison.jpg */; };
+		301F355016DF2ACE00388588 /* Calvin Coolidge.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 301F352716DF2ACE00388588 /* Calvin Coolidge.jpg */; };
+		301F355116DF2ACE00388588 /* Chester Arthur.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 301F352816DF2ACE00388588 /* Chester Arthur.jpg */; };
+		301F355216DF2ACE00388588 /* Dwight Eisenhower.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 301F352916DF2ACE00388588 /* Dwight Eisenhower.jpg */; };
+		301F355316DF2ACE00388588 /* Franklin Pierce.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 301F352A16DF2ACE00388588 /* Franklin Pierce.jpg */; };
+		301F355416DF2ACE00388588 /* Franklin Roosevelt.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 301F352B16DF2ACE00388588 /* Franklin Roosevelt.jpg */; };
+		301F355516DF2ACE00388588 /* George Bush.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 301F352C16DF2ACE00388588 /* George Bush.jpg */; };
+		301F355616DF2ACE00388588 /* George Washington.png in Resources */ = {isa = PBXBuildFile; fileRef = 301F352D16DF2ACE00388588 /* George Washington.png */; };
+		301F355716DF2ACE00388588 /* Gerald Ford.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 301F352E16DF2ACE00388588 /* Gerald Ford.jpg */; };
+		301F355816DF2ACE00388588 /* Grover Cleveland.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 301F352F16DF2ACE00388588 /* Grover Cleveland.jpg */; };
+		301F355916DF2ACE00388588 /* Harry Truman.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 301F353016DF2ACE00388588 /* Harry Truman.jpg */; };
+		301F355A16DF2ACE00388588 /* Herbert Hoover.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 301F353116DF2ACE00388588 /* Herbert Hoover.jpg */; };
+		301F355B16DF2ACE00388588 /* James Buchanan.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 301F353216DF2ACE00388588 /* James Buchanan.jpg */; };
+		301F355C16DF2ACE00388588 /* James Carter.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 301F353316DF2ACE00388588 /* James Carter.jpg */; };
+		301F355D16DF2ACE00388588 /* James Garfield.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 301F353416DF2ACE00388588 /* James Garfield.jpg */; };
+		301F355E16DF2ACE00388588 /* James Madison.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 301F353516DF2ACE00388588 /* James Madison.jpg */; };
+		301F355F16DF2ACE00388588 /* James Monroe.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 301F353616DF2ACE00388588 /* James Monroe.jpg */; };
+		301F356016DF2ACE00388588 /* James Polk.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 301F353716DF2ACE00388588 /* James Polk.jpg */; };
+		301F356116DF2ACE00388588 /* John Adams.png in Resources */ = {isa = PBXBuildFile; fileRef = 301F353816DF2ACE00388588 /* John Adams.png */; };
+		301F356216DF2ACE00388588 /* John Kennedy.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 301F353916DF2ACE00388588 /* John Kennedy.jpg */; };
+		301F356316DF2ACE00388588 /* John Tyler.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 301F353A16DF2ACE00388588 /* John Tyler.jpg */; };
+		301F356416DF2ACE00388588 /* Lyndon Johnson.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 301F353B16DF2ACE00388588 /* Lyndon Johnson.jpg */; };
+		301F356516DF2ACE00388588 /* Martin Van Buren.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 301F353C16DF2ACE00388588 /* Martin Van Buren.jpg */; };
+		301F356616DF2ACE00388588 /* Millard Fillmore.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 301F353D16DF2ACE00388588 /* Millard Fillmore.jpg */; };
+		301F356716DF2ACE00388588 /* Richard Nixon.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 301F353E16DF2ACE00388588 /* Richard Nixon.jpg */; };
+		301F356816DF2ACE00388588 /* Ronald Reagan.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 301F353F16DF2ACE00388588 /* Ronald Reagan.jpg */; };
+		301F356916DF2ACE00388588 /* Rutherford Hayes.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 301F354016DF2ACE00388588 /* Rutherford Hayes.jpg */; };
+		301F356A16DF2ACE00388588 /* Theodore Roosevelt.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 301F354116DF2ACE00388588 /* Theodore Roosevelt.jpg */; };
+		301F356B16DF2ACE00388588 /* Thomas Jefferson.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 301F354216DF2ACE00388588 /* Thomas Jefferson.jpg */; };
+		301F356C16DF2ACE00388588 /* Ulysses Grant.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 301F354316DF2ACE00388588 /* Ulysses Grant.jpg */; };
+		301F356D16DF2ACE00388588 /* Warren Harding.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 301F354416DF2ACE00388588 /* Warren Harding.jpg */; };
+		301F356E16DF2ACE00388588 /* William Clinton.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 301F354516DF2ACE00388588 /* William Clinton.jpg */; };
+		301F356F16DF2ACE00388588 /* William Henry Harrison.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 301F354616DF2ACE00388588 /* William Henry Harrison.jpg */; };
+		301F357016DF2ACE00388588 /* William McKinley.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 301F354716DF2ACE00388588 /* William McKinley.jpg */; };
+		301F357116DF2ACE00388588 /* William Taft.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 301F354816DF2ACE00388588 /* William Taft.jpg */; };
+		301F357216DF2ACE00388588 /* Woodrow Wilson.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 301F354916DF2ACE00388588 /* Woodrow Wilson.jpg */; };
+		301F357316DF2ACE00388588 /* Zachary Taylor.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 301F354A16DF2ACE00388588 /* Zachary Taylor.jpg */; };
+		301F357516DF32BC00388588 /* homeicon.png in Resources */ = {isa = PBXBuildFile; fileRef = 301F357416DF32BC00388588 /* homeicon.png */; };
 		3038931316DC573D0024EFA7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3038931216DC573D0024EFA7 /* UIKit.framework */; };
 		3038931516DC573D0024EFA7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3038931416DC573D0024EFA7 /* Foundation.framework */; };
 		3038931716DC573D0024EFA7 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3038931616DC573D0024EFA7 /* CoreGraphics.framework */; };
@@ -18,8 +60,6 @@
 		3038932716DC573D0024EFA7 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3038932616DC573D0024EFA7 /* Default@2x.png */; };
 		3038932916DC573D0024EFA7 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3038932816DC573D0024EFA7 /* Default-568h@2x.png */; };
 		3038932C16DC573D0024EFA7 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3038932A16DC573D0024EFA7 /* MainStoryboard.storyboard */; };
-		3038933116DC573D0024EFA7 /* first.png in Resources */ = {isa = PBXBuildFile; fileRef = 3038933016DC573D0024EFA7 /* first.png */; };
-		3038933316DC573D0024EFA7 /* first@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3038933216DC573D0024EFA7 /* first@2x.png */; };
 		3038933616DC573D0024EFA7 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3038933516DC573D0024EFA7 /* SecondViewController.m */; };
 		3038933816DC573D0024EFA7 /* second.png in Resources */ = {isa = PBXBuildFile; fileRef = 3038933716DC573D0024EFA7 /* second.png */; };
 		3038933A16DC573D0024EFA7 /* second@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3038933916DC573D0024EFA7 /* second@2x.png */; };
@@ -29,6 +69,48 @@
 
 /* Begin PBXFileReference section */
 		301F351E16DE79CF00388588 /* PresidentDetails.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PresidentDetails.xib; sourceTree = "<group>"; };
+		301F352216DF2ACE00388588 /* Abraham Lincoln.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Abraham Lincoln.jpg"; sourceTree = "<group>"; };
+		301F352316DF2ACE00388588 /* Andrew Jackson.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Andrew Jackson.jpg"; sourceTree = "<group>"; };
+		301F352416DF2ACE00388588 /* Andrew Johnson.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Andrew Johnson.jpg"; sourceTree = "<group>"; };
+		301F352516DF2ACE00388588 /* Barack Obama.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Barack Obama.jpg"; sourceTree = "<group>"; };
+		301F352616DF2ACE00388588 /* Benjamin Harrison.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Benjamin Harrison.jpg"; sourceTree = "<group>"; };
+		301F352716DF2ACE00388588 /* Calvin Coolidge.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Calvin Coolidge.jpg"; sourceTree = "<group>"; };
+		301F352816DF2ACE00388588 /* Chester Arthur.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Chester Arthur.jpg"; sourceTree = "<group>"; };
+		301F352916DF2ACE00388588 /* Dwight Eisenhower.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Dwight Eisenhower.jpg"; sourceTree = "<group>"; };
+		301F352A16DF2ACE00388588 /* Franklin Pierce.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Franklin Pierce.jpg"; sourceTree = "<group>"; };
+		301F352B16DF2ACE00388588 /* Franklin Roosevelt.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Franklin Roosevelt.jpg"; sourceTree = "<group>"; };
+		301F352C16DF2ACE00388588 /* George Bush.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "George Bush.jpg"; sourceTree = "<group>"; };
+		301F352D16DF2ACE00388588 /* George Washington.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "George Washington.png"; sourceTree = "<group>"; };
+		301F352E16DF2ACE00388588 /* Gerald Ford.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Gerald Ford.jpg"; sourceTree = "<group>"; };
+		301F352F16DF2ACE00388588 /* Grover Cleveland.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Grover Cleveland.jpg"; sourceTree = "<group>"; };
+		301F353016DF2ACE00388588 /* Harry Truman.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Harry Truman.jpg"; sourceTree = "<group>"; };
+		301F353116DF2ACE00388588 /* Herbert Hoover.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Herbert Hoover.jpg"; sourceTree = "<group>"; };
+		301F353216DF2ACE00388588 /* James Buchanan.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "James Buchanan.jpg"; sourceTree = "<group>"; };
+		301F353316DF2ACE00388588 /* James Carter.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "James Carter.jpg"; sourceTree = "<group>"; };
+		301F353416DF2ACE00388588 /* James Garfield.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "James Garfield.jpg"; sourceTree = "<group>"; };
+		301F353516DF2ACE00388588 /* James Madison.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "James Madison.jpg"; sourceTree = "<group>"; };
+		301F353616DF2ACE00388588 /* James Monroe.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "James Monroe.jpg"; sourceTree = "<group>"; };
+		301F353716DF2ACE00388588 /* James Polk.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "James Polk.jpg"; sourceTree = "<group>"; };
+		301F353816DF2ACE00388588 /* John Adams.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "John Adams.png"; sourceTree = "<group>"; };
+		301F353916DF2ACE00388588 /* John Kennedy.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "John Kennedy.jpg"; sourceTree = "<group>"; };
+		301F353A16DF2ACE00388588 /* John Tyler.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "John Tyler.jpg"; sourceTree = "<group>"; };
+		301F353B16DF2ACE00388588 /* Lyndon Johnson.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Lyndon Johnson.jpg"; sourceTree = "<group>"; };
+		301F353C16DF2ACE00388588 /* Martin Van Buren.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Martin Van Buren.jpg"; sourceTree = "<group>"; };
+		301F353D16DF2ACE00388588 /* Millard Fillmore.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Millard Fillmore.jpg"; sourceTree = "<group>"; };
+		301F353E16DF2ACE00388588 /* Richard Nixon.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Richard Nixon.jpg"; sourceTree = "<group>"; };
+		301F353F16DF2ACE00388588 /* Ronald Reagan.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Ronald Reagan.jpg"; sourceTree = "<group>"; };
+		301F354016DF2ACE00388588 /* Rutherford Hayes.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Rutherford Hayes.jpg"; sourceTree = "<group>"; };
+		301F354116DF2ACE00388588 /* Theodore Roosevelt.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Theodore Roosevelt.jpg"; sourceTree = "<group>"; };
+		301F354216DF2ACE00388588 /* Thomas Jefferson.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Thomas Jefferson.jpg"; sourceTree = "<group>"; };
+		301F354316DF2ACE00388588 /* Ulysses Grant.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Ulysses Grant.jpg"; sourceTree = "<group>"; };
+		301F354416DF2ACE00388588 /* Warren Harding.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Warren Harding.jpg"; sourceTree = "<group>"; };
+		301F354516DF2ACE00388588 /* William Clinton.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "William Clinton.jpg"; sourceTree = "<group>"; };
+		301F354616DF2ACE00388588 /* William Henry Harrison.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "William Henry Harrison.jpg"; sourceTree = "<group>"; };
+		301F354716DF2ACE00388588 /* William McKinley.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "William McKinley.jpg"; sourceTree = "<group>"; };
+		301F354816DF2ACE00388588 /* William Taft.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "William Taft.jpg"; sourceTree = "<group>"; };
+		301F354916DF2ACE00388588 /* Woodrow Wilson.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Woodrow Wilson.jpg"; sourceTree = "<group>"; };
+		301F354A16DF2ACE00388588 /* Zachary Taylor.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Zachary Taylor.jpg"; sourceTree = "<group>"; };
+		301F357416DF32BC00388588 /* homeicon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = homeicon.png; sourceTree = "<group>"; };
 		3038930E16DC573D0024EFA7 /* MDF1_week4.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MDF1_week4.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3038931216DC573D0024EFA7 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		3038931416DC573D0024EFA7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -43,8 +125,6 @@
 		3038932616DC573D0024EFA7 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		3038932816DC573D0024EFA7 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		3038932B16DC573D0024EFA7 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
-		3038933016DC573D0024EFA7 /* first.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = first.png; sourceTree = "<group>"; };
-		3038933216DC573D0024EFA7 /* first@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "first@2x.png"; sourceTree = "<group>"; };
 		3038933416DC573D0024EFA7 /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
 		3038933516DC573D0024EFA7 /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
 		3038933716DC573D0024EFA7 /* second.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = second.png; sourceTree = "<group>"; };
@@ -69,6 +149,54 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		301F352116DF2ACE00388588 /* img */ = {
+			isa = PBXGroup;
+			children = (
+				301F352216DF2ACE00388588 /* Abraham Lincoln.jpg */,
+				301F352316DF2ACE00388588 /* Andrew Jackson.jpg */,
+				301F352416DF2ACE00388588 /* Andrew Johnson.jpg */,
+				301F352516DF2ACE00388588 /* Barack Obama.jpg */,
+				301F352616DF2ACE00388588 /* Benjamin Harrison.jpg */,
+				301F352716DF2ACE00388588 /* Calvin Coolidge.jpg */,
+				301F352816DF2ACE00388588 /* Chester Arthur.jpg */,
+				301F352916DF2ACE00388588 /* Dwight Eisenhower.jpg */,
+				301F352A16DF2ACE00388588 /* Franklin Pierce.jpg */,
+				301F352B16DF2ACE00388588 /* Franklin Roosevelt.jpg */,
+				301F352C16DF2ACE00388588 /* George Bush.jpg */,
+				301F352D16DF2ACE00388588 /* George Washington.png */,
+				301F352E16DF2ACE00388588 /* Gerald Ford.jpg */,
+				301F352F16DF2ACE00388588 /* Grover Cleveland.jpg */,
+				301F353016DF2ACE00388588 /* Harry Truman.jpg */,
+				301F353116DF2ACE00388588 /* Herbert Hoover.jpg */,
+				301F353216DF2ACE00388588 /* James Buchanan.jpg */,
+				301F353316DF2ACE00388588 /* James Carter.jpg */,
+				301F353416DF2ACE00388588 /* James Garfield.jpg */,
+				301F353516DF2ACE00388588 /* James Madison.jpg */,
+				301F353616DF2ACE00388588 /* James Monroe.jpg */,
+				301F353716DF2ACE00388588 /* James Polk.jpg */,
+				301F353816DF2ACE00388588 /* John Adams.png */,
+				301F353916DF2ACE00388588 /* John Kennedy.jpg */,
+				301F353A16DF2ACE00388588 /* John Tyler.jpg */,
+				301F353B16DF2ACE00388588 /* Lyndon Johnson.jpg */,
+				301F353C16DF2ACE00388588 /* Martin Van Buren.jpg */,
+				301F353D16DF2ACE00388588 /* Millard Fillmore.jpg */,
+				301F353E16DF2ACE00388588 /* Richard Nixon.jpg */,
+				301F353F16DF2ACE00388588 /* Ronald Reagan.jpg */,
+				301F354016DF2ACE00388588 /* Rutherford Hayes.jpg */,
+				301F354116DF2ACE00388588 /* Theodore Roosevelt.jpg */,
+				301F354216DF2ACE00388588 /* Thomas Jefferson.jpg */,
+				301F354316DF2ACE00388588 /* Ulysses Grant.jpg */,
+				301F354416DF2ACE00388588 /* Warren Harding.jpg */,
+				301F354516DF2ACE00388588 /* William Clinton.jpg */,
+				301F354616DF2ACE00388588 /* William Henry Harrison.jpg */,
+				301F354716DF2ACE00388588 /* William McKinley.jpg */,
+				301F354816DF2ACE00388588 /* William Taft.jpg */,
+				301F354916DF2ACE00388588 /* Woodrow Wilson.jpg */,
+				301F354A16DF2ACE00388588 /* Zachary Taylor.jpg */,
+			);
+			path = img;
+			sourceTree = "<group>";
+		};
 		3038930316DC573D0024EFA7 = {
 			isa = PBXGroup;
 			children = (
@@ -99,6 +227,7 @@
 		3038931816DC573D0024EFA7 /* MDF1_week4 */ = {
 			isa = PBXGroup;
 			children = (
+				301F352116DF2ACE00388588 /* img */,
 				3038932116DC573D0024EFA7 /* AppDelegate.h */,
 				3038932216DC573D0024EFA7 /* AppDelegate.m */,
 				3038932A16DC573D0024EFA7 /* MainStoryboard.storyboard */,
@@ -106,9 +235,8 @@
 				3038934116DC58850024EFA7 /* MainTableView.m */,
 				3038935116DE74C60024EFA7 /* PresidentDetails.h */,
 				3038935216DE74C60024EFA7 /* PresidentDetails.m */,
+				301F357416DF32BC00388588 /* homeicon.png */,
 				301F351E16DE79CF00388588 /* PresidentDetails.xib */,
-				3038933016DC573D0024EFA7 /* first.png */,
-				3038933216DC573D0024EFA7 /* first@2x.png */,
 				3038933416DC573D0024EFA7 /* SecondViewController.h */,
 				3038933516DC573D0024EFA7 /* SecondViewController.m */,
 				3038933716DC573D0024EFA7 /* second.png */,
@@ -188,11 +316,51 @@
 				3038932716DC573D0024EFA7 /* Default@2x.png in Resources */,
 				3038932916DC573D0024EFA7 /* Default-568h@2x.png in Resources */,
 				3038932C16DC573D0024EFA7 /* MainStoryboard.storyboard in Resources */,
-				3038933116DC573D0024EFA7 /* first.png in Resources */,
-				3038933316DC573D0024EFA7 /* first@2x.png in Resources */,
 				3038933816DC573D0024EFA7 /* second.png in Resources */,
 				3038933A16DC573D0024EFA7 /* second@2x.png in Resources */,
 				301F351F16DE79CF00388588 /* PresidentDetails.xib in Resources */,
+				301F354B16DF2ACE00388588 /* Abraham Lincoln.jpg in Resources */,
+				301F354C16DF2ACE00388588 /* Andrew Jackson.jpg in Resources */,
+				301F354D16DF2ACE00388588 /* Andrew Johnson.jpg in Resources */,
+				301F354E16DF2ACE00388588 /* Barack Obama.jpg in Resources */,
+				301F354F16DF2ACE00388588 /* Benjamin Harrison.jpg in Resources */,
+				301F355016DF2ACE00388588 /* Calvin Coolidge.jpg in Resources */,
+				301F355116DF2ACE00388588 /* Chester Arthur.jpg in Resources */,
+				301F355216DF2ACE00388588 /* Dwight Eisenhower.jpg in Resources */,
+				301F355316DF2ACE00388588 /* Franklin Pierce.jpg in Resources */,
+				301F355416DF2ACE00388588 /* Franklin Roosevelt.jpg in Resources */,
+				301F355516DF2ACE00388588 /* George Bush.jpg in Resources */,
+				301F355616DF2ACE00388588 /* George Washington.png in Resources */,
+				301F355716DF2ACE00388588 /* Gerald Ford.jpg in Resources */,
+				301F355816DF2ACE00388588 /* Grover Cleveland.jpg in Resources */,
+				301F355916DF2ACE00388588 /* Harry Truman.jpg in Resources */,
+				301F355A16DF2ACE00388588 /* Herbert Hoover.jpg in Resources */,
+				301F355B16DF2ACE00388588 /* James Buchanan.jpg in Resources */,
+				301F355C16DF2ACE00388588 /* James Carter.jpg in Resources */,
+				301F355D16DF2ACE00388588 /* James Garfield.jpg in Resources */,
+				301F355E16DF2ACE00388588 /* James Madison.jpg in Resources */,
+				301F355F16DF2ACE00388588 /* James Monroe.jpg in Resources */,
+				301F356016DF2ACE00388588 /* James Polk.jpg in Resources */,
+				301F356116DF2ACE00388588 /* John Adams.png in Resources */,
+				301F356216DF2ACE00388588 /* John Kennedy.jpg in Resources */,
+				301F356316DF2ACE00388588 /* John Tyler.jpg in Resources */,
+				301F356416DF2ACE00388588 /* Lyndon Johnson.jpg in Resources */,
+				301F356516DF2ACE00388588 /* Martin Van Buren.jpg in Resources */,
+				301F356616DF2ACE00388588 /* Millard Fillmore.jpg in Resources */,
+				301F356716DF2ACE00388588 /* Richard Nixon.jpg in Resources */,
+				301F356816DF2ACE00388588 /* Ronald Reagan.jpg in Resources */,
+				301F356916DF2ACE00388588 /* Rutherford Hayes.jpg in Resources */,
+				301F356A16DF2ACE00388588 /* Theodore Roosevelt.jpg in Resources */,
+				301F356B16DF2ACE00388588 /* Thomas Jefferson.jpg in Resources */,
+				301F356C16DF2ACE00388588 /* Ulysses Grant.jpg in Resources */,
+				301F356D16DF2ACE00388588 /* Warren Harding.jpg in Resources */,
+				301F356E16DF2ACE00388588 /* William Clinton.jpg in Resources */,
+				301F356F16DF2ACE00388588 /* William Henry Harrison.jpg in Resources */,
+				301F357016DF2ACE00388588 /* William McKinley.jpg in Resources */,
+				301F357116DF2ACE00388588 /* William Taft.jpg in Resources */,
+				301F357216DF2ACE00388588 /* Woodrow Wilson.jpg in Resources */,
+				301F357316DF2ACE00388588 /* Zachary Taylor.jpg in Resources */,
+				301F357516DF32BC00388588 /* homeicon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

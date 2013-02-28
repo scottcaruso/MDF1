@@ -22,6 +22,8 @@
     
     NSMutableString *presidentFirstName; //used by the parser to create a string for the table
     NSMutableString *presidentLastName; //used by the parser to create a string for the table
+    NSMutableString *linkToRecord; //used by the parser to save off a local copy of the full XML record for the given President
+    NSMutableDictionary *dictionaryOfPresidents; //used to store Presidents and their XML for later use;
 }
 
 @property (nonatomic) NSMutableArray *presidentNames; //create an array of the President names to pass around.

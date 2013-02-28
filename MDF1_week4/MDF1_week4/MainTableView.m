@@ -29,8 +29,10 @@
 {
     //initialize the arrays and strings that will make up 
     presidentNames = [[NSMutableArray alloc] initWithObjects:nil];
+    linkToRecord = [[NSMutableString alloc] initWithFormat:@""];
     presidentFirstName = [[NSMutableString alloc] initWithFormat:@""];
     presidentLastName = [[NSMutableString alloc] initWithFormat:@""];
+    dictionaryOfPresidents = [[NSMutableDictionary alloc] initWithObjectsAndKeys: nil];
     
     //fetch the govtrack xml data
     url = [[NSURL alloc] initWithString:@"http://www.govtrack.us/api/v1/person/?roles__role_type=president&format=xml&limit=50"];
@@ -86,50 +88,15 @@
     return cell;
 }
 
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
-
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    }   
-    else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
-{
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     PresidentDetails *detailView = [[PresidentDetails alloc] initWithNibName:@"PresidentDetails" bundle:nil];
     if (detailView != nil)
     {
+        NSArray *presidentKey = [dictionaryOfPresidents allKeysForObject:[presidentNames objectAtIndex:indexPath.row]];
+        NSString *thisURL = [presidentKey objectAtIndex:0];
+        detailView.presidentDetailURL = thisURL;
+        detailView.nameOfPresident = [presidentNames objectAtIndex:indexPath.row];
         [self presentViewController:detailView animated:TRUE completion:nil];
     }
 }
@@ -172,13 +139,15 @@
 -(void)parser:(NSXMLParser *)parser didStartElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qName attributes:(NSDictionary *)attributeDict
 {
     currentElement = [[NSString alloc] initWithString:elementName];
+    
 }
 
 - (void)parser:(NSXMLParser *)parser foundCharacters:(NSString *)string
 {
     NSString *firstNameID = [[NSString alloc] initWithFormat:@"firstname"];
     NSString *lastNameID = [[NSString alloc] initWithFormat:@"lastname"];
-    NSString *whenToCompileString = [[NSString alloc] initWithFormat:@"bioguideid"];
+    NSString *resourceID = [[NSString alloc] initWithFormat:@"resource_uri"];
+    
     if ([currentElement isEqualToString:firstNameID])
     {
         [presidentFirstName setString:string];
@@ -187,11 +156,17 @@
     {
         [presidentLastName setString:string];
     }
-    if ([currentElement isEqualToString:whenToCompileString])
+    if ([currentElement isEqualToString:resourceID])
     {
-        NSMutableString *presidentName = [[NSMutableString alloc] initWithString:presidentFirstName];
-        [presidentName appendFormat:@" %@",presidentLastName];
-        [presidentNames addObject:presidentName];
+        NSString *whichString = [string substringToIndex:13];
+        [linkToRecord setString:string];
+        if ([whichString isEqualToString:@"/api/v1/perso"])
+        {
+            NSMutableString *presidentName = [[NSMutableString alloc] initWithString:presidentFirstName];
+            [presidentName appendFormat:@" %@",presidentLastName];
+            [presidentNames addObject:presidentName];
+            [dictionaryOfPresidents setObject:presidentName forKey:linkToRecord];
+        }
     }
 }
 

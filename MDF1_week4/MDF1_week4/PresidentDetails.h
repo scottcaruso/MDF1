@@ -8,13 +8,21 @@
 
 #import <UIKit/UIKit.h>
 
-@interface PresidentDetails : UIViewController
+@interface PresidentDetails : UIViewController <NSXMLParserDelegate>
 {
-    IBOutlet UILabel *presidentName;
-    IBOutlet UITextView *presidentDetails;
     IBOutlet UIImageView *presidentPicture;
+    IBOutlet UITextView *presidentDetails;
+    IBOutlet UILabel *presidentName;
+    
+    NSURLRequest *getPresidentDetail;
+    NSURL *url;
+    NSURLConnection *connection;
+    NSMutableData *presidentDetailObject;
 }
 
 -(IBAction)returnToList:(id)sender;
+@property (nonatomic) NSString *nameOfPresident;
+@property (nonatomic) IBOutlet UIImageView *presidentPicture;
+@property (nonatomic) NSString *presidentDetailURL;
 
 @end
