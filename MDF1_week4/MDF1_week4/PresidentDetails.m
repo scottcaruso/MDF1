@@ -38,8 +38,8 @@
         [self connectionDidFinishLoading:connection];  
     }
     presidentName.text = nameOfPresident;
-    //George Washington's picture is a png. Everyone else's is a jpg. This sets a special string for George Washington.
-    if ([nameOfPresident isEqualToString:@"George Washington"])
+    //George Washington's and John Adam's picture is a png. Everyone else's is a jpg. This sets a special string for George Washington.
+    if ([nameOfPresident isEqualToString:@"George Washington"] || [nameOfPresident isEqualToString:@"John Adams"])
     {
         NSString *imageString = [[NSString alloc] initWithFormat:@"%@.png",nameOfPresident];
         UIImage *image = [UIImage imageNamed:imageString];
